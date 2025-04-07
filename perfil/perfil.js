@@ -91,7 +91,7 @@ function checkUserLogin(elements) {
         logoutBtn.addEventListener('click', function (e) {
             e.preventDefault();
             localStorage.removeItem('loggedInUser');
-            window.location.href = '../new_index.html';
+            window.location.href = '../index.html';
         });
         authButtons.appendChild(logoutBtn);
     }
