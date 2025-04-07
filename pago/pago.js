@@ -246,7 +246,7 @@ if (confirmBtn) {
 
         // Redirigir a la página de confirmación
         setTimeout(() => {
-            window.location.href = '/new_index.html';
+            window.location.href = '/index.html';
         }, 1000);
     });
 }

@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
             <!-- Encabezado del producto -->
             <div class="product-header">
                 <div class="product-breadcrumb">
-                    <a href="/new_index.html">Inicio</a>
+                    <a href="/index.html">Inicio</a>
                     <span class="separator">/</span>
-                    <a href="/new_index.html">Catálogo</a>
+                    <a href="/index.html">Catálogo</a>
                     <span class="separator">/</span>
-                    <a href="/new_index.html?category=${product.category}">${capitalizeFirstLetter(product.category)}</a>
+                    <a href="/index.html?category=${product.category}">${capitalizeFirstLetter(product.category)}</a>
                     <span class="separator">/</span>
                     <span>${product.name}</span>
                 </div>
@@ -525,7 +525,7 @@ function showError(message) {
         <div class="error-message">
             <h2>Error</h2>
             <p>${message}</p>
-            <a href="/new_index.html" class="button">Volver a la página principal</a>
+            <a href="/index.html" class="button">Volver a la página principal</a>
         </div>
     `;
 }

@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Simular redirección después de registro exitoso
         setTimeout(() => {
-            window.location.href = '/new_index.html';
+            window.location.href = '/index.html';
         }, 2000);
     });
 
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Simular redirección después de login exitoso
         setTimeout(() => {
-            window.location.href = '/new_index.html';
+            window.location.href = '/index.html';
         }, 2000);
     });
 
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Simular redirección después de registro exitoso
         setTimeout(() => {
-            window.location.href = '/new_index.html';
+            window.location.href = '/index.html';
         }, 2000);
     });
 
