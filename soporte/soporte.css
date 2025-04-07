@@ -1,0 +1,507 @@
+/* soporte.css - Estilos para la página de soporte con tema Cyberpunk */
+
+:root {
+  /* Utilizando las variables globales del tema cyberpunk */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  background-image: linear-gradient(
+      0deg,
+      rgba(10, 10, 15, 0.9),
+      rgba(10, 10, 15, 0.9)
+    ),
+    url("/indexPrincipal/img/grid-pattern.png");
+  color: var(--text-primary, #e0e0e0);
+  font-family: var(--font-primary, "Rajdhani"), sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Efecto de grid cyberpunk */
+.neon-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 243, 255, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 243, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: -2;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Buscador Cyberpunk */
+.container {
+  position: relative;
+}
+
+.input {
+  background: rgba(16, 16, 28, 0.6);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--text-primary, #e0e0e0);
+  font-family: var(--font-secondary, "Orbitron"), sans-serif;
+  width: 250px;
+  transition: var(--transition-normal, 0.3s ease);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: var(--neon-shadow-primary);
+  border-color: var(--color-primary);
+}
+
+/* Título principal */
+.section-title {
+  text-align: center;
+  padding: 2rem 0;
+  position: relative;
+  margin-top: 80px; /* Añadido margen superior para compensar el header fijo */
+}
+
+.section-title h2 {
+  font-family: var(--font-secondary, "Orbitron"), sans-serif;
+  font-size: var(--font-size-3xl, 2.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #fff 50%, var(--color-accent) 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: neonPulse 2s infinite;
+  margin: 0;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+  box-shadow: var(--neon-shadow-primary);
+}
+
+/* Contenedor de soporte - Efecto de panel holográfico */
+.support-container {
+  max-width: var(--container-max-width, 1200px);
+  margin: 2rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl, 2rem);
+  background: var(--color-bg-card);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.support-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-card);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.support-container:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--neon-shadow-primary);
+}
+
+.support-container:hover::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 12px;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    transparent,
+    rgba(0, 243, 255, 0.3),
+    transparent,
+    var(--color-primary)
+  );
+  background-size: 400% 400%;
+  z-index: -2;
+  filter: blur(8px);
+  animation: borderGlow 3s ease infinite;
+  opacity: 0.6;
+}
+
+.support-section {
+  position: relative;
+  z-index: 1;
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg, 1.5rem);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  transition: var(--transition-normal, 0.3s ease);
+}
+
+.support-section:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-shadow-primary);
+  border-color: var(--color-primary);
+}
+
+/* Preguntas frecuentes - Estilo cyberpunk */
+.faq-item {
+  margin-bottom: var(--spacing-md, 1rem);
+  border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+  padding-bottom: var(--spacing-md, 1rem);
+  transition: var(--transition-normal, 0.3s ease);
+}
+
+.faq-item:hover {
+  border-color: var(--color-primary);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: var(--spacing-md, 1rem) 0;
+  transition: var(--transition-normal, 0.3s ease);
+}
+
+.faq-question:hover {
+  color: var(--color-primary);
+}
+
+.faq-question h4 {
+  margin: 0;
+  font-size: var(--font-size-lg, 1.25rem);
+  font-weight: 500;
+  font-family: var(--font-secondary, "Orbitron"), sans-serif;
+}
+
+.faq-question svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] svg {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer p {
+  margin: var(--spacing-md, 1rem) 0 0;
+  line-height: 1.6;
+  color: var(--text-secondary, #b0b0b0);
+  font-family: var(--font-tertiary, "Exo 2"), sans-serif;
+}
+
+/* Formulario de contacto - Estilo futurista */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg, 1.5rem);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs, 0.25rem);
+}
+
+.form-group label {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm, 0.875rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-secondary, "Orbitron"), sans-serif;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(16, 16, 28, 0.6);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--text-primary, #e0e0e0);
+  font-family: var(--font-tertiary, "Exo 2"), sans-serif;
+  transition: var(--transition-normal, 0.3s ease);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--neon-shadow-primary);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Botón cyberpunk */
+.button {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 243, 255, 0.2),
+    rgba(255, 0, 255, 0.2)
+  );
+  border: 1px solid var(--color-primary);
+  border-radius: 25px;
+  color: #fff;
+  font-family: var(--font-secondary, "Orbitron"), sans-serif;
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition-normal, 0.3s ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 243, 255, 0.4),
+    rgba(255, 0, 255, 0.4)
+  );
+  box-shadow: 0 0 15px var(--color-primary);
+  transform: translateY(-3px);
+}
+
+.button:hover::before {
+  left: 100%;
+}
+
+.button svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.button:hover svg {
+  transform: rotate(90deg);
+}
+
+/* Efectos de partículas neon */
+.neon-particles,
+.neon-particles-header,
+.neon-particles-footer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Notificación cyberpunk */
+.cyber-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: var(--border-radius-sm);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-primary);
+  color: white;
+  font-family: var(--font-secondary, "Orbitron"), sans-serif;
+  font-weight: bold;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: var(--transition-normal, 0.3s ease);
+  backdrop-filter: blur(5px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: var(--font-size-sm, 0.875rem);
+  box-shadow: var(--neon-shadow-primary);
+}
+
+.cyber-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cyber-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 243, 255, 0.3);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+/* Animaciones */
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes neonPulse {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 0, 102, 0.5),
+      0 0 20px rgba(255, 0, 102, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+      0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px #ff006699,
+      0 0 40px rgba(255, 0, 102, 0.4);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, 10px) rotate(2deg);
+  }
+  50% {
+    transform: translate(0, 20px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-10px, 10px) rotate(-2deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100%) translateX(100%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .support-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .section-title h2 {
+    font-size: var(--font-size-2xl, 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .input {
+    width: 100%;
+  }
+
+  .button {
+    padding: 0.8rem 1rem;
+    font-size: var(--font-size-xs, 0.75rem);
+  }
+
+  .section-title h2 {
+    font-size: var(--font-size-xl, 1.5rem);
+  }
+
+  .support-section {
+    padding: 1.5rem;
+  }
+
+  .faq-question h4 {
+    font-size: var(--font-size-md, 1rem);
+  }
+}

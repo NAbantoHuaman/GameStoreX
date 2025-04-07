@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone | Tu tienda de videojuegos PS5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/indexPrincipal/css/main.css">
+    <link rel="stylesheet" href="/indexPrincipal/css/user-welcome.css">
+    <link rel="stylesheet" href="/busqueda/search-dropdown.css">
+    <link rel="stylesheet" href="/script/preorder-notification.css">
+</head>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="/new_index.html">
+                <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                <span class="logo-text">GAME<span class="accent">STORE</span></span>
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="/new_index.html" class="active">Inicio</a></li>
+                <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                <li><a href="/nosotros/nosotros.html">Nosotros</a></li>
+                <li><a href="/navegacion/blog.html">Blog</a></li>
+                <li><a href="/soporte/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Buscar en el header -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar juegos...">
+                <button id="searchButton" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <a href="/carrito/carrito.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="/Isesion/index.html" class="user-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-slider">
+        <!-- Slide para el video de youtube-->
+        <div class="slide active">
+            <iframe class="slide-video"
+                src="https://www.youtube.com/embed/4tk8lkmYGWQ?autoplay=1&mute=1&loop=1&playlist=4tk8lkmYGWQ&controls=0&modestbranding=1&rel=0&enablejsapi=1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <div class="slide-overlay"></div>
+            <div class="container">
+                <div class="slide-content">
+                    <div class="slide-badge">EXCLUSIVO PS5</div>
+                    <h1 class="glitch-text">DOOM: THE DARK AGES</h1>
+                    <p>Enfréntate a las hordas del infierno en la nueva entrega de DOOM</p>
+                    <div class="slide-buttons">
+                        <button class="btn btn-secondary" data-id="doom-the-dark-ages" data-name="DOOM: The Dark Ages" data-price="164.00" data-image="/img/juegos/1737754002-doom-the-dark-ages-ps5-pre-orden-0.webp" data-currency="S/."><i class="fas fa-shopping-cart"></i> Pre-ordenar ahora</button>
+                        <a href="https://www.youtube.com/watch?v=4tk8lkmYGWQ&ab_channel=BethesdaSoftworks"
+                            class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-play"></i> Ver trailer</a>
+                    </div>
+                    <div class="promo-tag">20% OFF en pre-orden</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide del 2 video-->
+        <div class="slide active">
+            <iframe class="slide-video"
+                src="https://www.youtube.com/embed/Cr5rQ1NZ0Tw?autoplay=1&mute=1&loop=1&playlist=Cr5rQ1NZ0Tw&controls=0&modestbranding=1&rel=0&enablejsapi=1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <div class="slide-overlay"></div>
+            <div class="container">
+                <div class="slide-content">
+                    <div class="slide-badge">NUEVO LANZAMIENTO</div>
+                    <h1 class="glitch-text">BLACK MYTH: WUKONG</h1>
+                    <p>Embárcate en una aventura épica inspirada en la mitología china</p>
+                    <div class="slide-buttons">
+                        <button class="btn btn-secondary" data-id="black-myth-wukong" data-name="Black Myth: Wukong" data-price="144.00" data-image="/img/juegos/1718149460-black-myth-wukong-ps5-pre-orden-0.jpg" data-currency="S/."><i class="fas fa-shopping-cart"></i> Comprar ahora</button>
+                        <a href="https://www.youtube.com/watch?v=ZZUnovPjfPA&ab_channel=DarkPlayerGamingTV"
+                            class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fas fa-gamepad"></i> Ver Gameplay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide del 3 video -->
+        <div class="slide active">
+            <iframe class="slide-video"
+                src="https://www.youtube.com/embed/2u6VmVmhh-k?autoplay=1&mute=1&loop=1&playlist=2u6VmVmhh-k&controls=0&modestbranding=1&rel=0&enablejsapi=1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <div class="slide-overlay"></div>
+            <div class="container">
+                <div class="slide-content">
+                    <div class="slide-badge">PRE-ORDEN</div>
+                    <h1 class="glitch-text">MONSTER HUNTER WILDS</h1>
+                    <p>Caza monstruos colosales en un mundo abierto lleno de peligros</p>
+                    <div class="slide-buttons">
+                        <button class="btn btn-secondary" data-id="monster-hunter-wilds" data-name="Monster Hunter Wilds" data-price="149.00" data-image="/img/juegos/1718238829-monster-hunter-wilds-ps5-pre-orden-0.jpg" data-currency="S/."><i class="fas fa-shopping-cart"></i> Pre-ordenar ahora</button>
+                        <a href="/producto.html?id=monster-hunter-wilds" class="btn btn-secondary"><i class="fas fa-info-circle"></i> Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles del Slider -->
+    <div class="slider-controls">
+        <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+        <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</section>
+<!-- Juegos Destacados -->
+<section class="featured-games section">
+    <div class="container">
+        <div class="section-header">
+            <h2>JUEGOS <span class="accent">DESTACADOS</span></h2>
+            <div class="quick-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="accion">Acción</button>
+                <button class="filter-btn" data-filter="rpg">RPG</button>
+                <button class="filter-btn" data-filter="deportes">Deportes</button>
+                <button class="filter-btn" data-filter="exclusivos">Exclusivos</button>
+            </div>
+            <a href="/navegacion/juegos-destacados.html" class="view-all">Ver todos <i
+                    class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="games-grid">
+            <div class="game-card" data-category="rpg exclusivos">
+                <div class="game-card-header">
+                    <span class="game-tag">Exclusivo</span>
+                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="game-image-container">
+                    <img src="img/juegos/1697557602-marvels-spider-man-2-ps5-pre-orden-0.jpg" alt="Spider-Man 2"
+                        class="game-image">
+                    <div class="game-overlay">
+                        <a href="/producto.html?id=marvels-spider-man-2" class="btn-details">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Spider-Man 2</h3>
+                    <div class="game-meta">
+                        <span class="game-category">Acción/Aventura</span>
+                        <div class="game-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="game-price-actions">
+                        <div class="game-price">S/. 159.00</div>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="accion">
+                <div class="game-card-header">
+                    <span class="game-tag">Pre-orden</span>
+                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="game-image-container">
+                    <img src="img/juegos/1718149460-black-myth-wukong-ps5-pre-orden-0.jpg" alt="Black Myth: Wukong"
+                        class="game-image">
+                    <div class="game-overlay">
+                        <a href="/producto.html?id=black-myth-wukong" class="btn-details">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Black Myth: Wukong</h3>
+                    <div class="game-meta">
+                        <span class="game-category">Acción/RPG</span>
+                        <div class="game-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="game-price-actions">
+                        <div class="game-price">S/. 144.00</div>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="accion">
+                <div class="game-card-header">
+                    <span class="game-tag">Pre-orden</span>
+                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="game-image-container">
+                    <img src="img/juegos/1718238829-monster-hunter-wilds-ps5-pre-orden-0.jpg" alt="Monster Hunter Wilds"
+                        class="game-image">
+                    <div class="game-overlay">
+                        <a href="/producto.html?id=monster-hunter-wilds" class="btn-details">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>Monster Hunter Wilds</h3>
+                    <div class="game-meta">
+                        <span class="game-category">Acción/RPG</span>
+                        <div class="game-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+                    <div class="game-price-actions">
+                        <div class="game-price">S/. 149.00</div>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-category="accion">
+                <div class="game-card-header">
+                    <span class="game-tag">Pre-orden</span>
+                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="game-image-container">
+                    <img src="img/juegos/1737754002-doom-the-dark-ages-ps5-pre-orden-0.webp" alt="DOOM: The Dark Ages"
+                        class="game-image">
+                    <div class="game-overlay">
+                        <a href="/producto.html?id=doom-the-dark-ages" class="btn-details">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="game-info">
+                    <h3>DOOM: The Dark Ages</h3>
+                    <div class="game-meta">
+                        <span class="game-category">Acción/FPS</span>
+                        <div class="game-rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                    <div class="game-price-actions">
+                        <div class="game-price">S/. 159.00</div>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categorías Principales -->
+<section class="categories section">
+    <div class="container">
+        <div class="section-header">
+            <h2>EXPLORA POR <span class="accent">CATEGORÍAS</span></h2>
+        </div>
+        <div class="categories-grid">
+            <a href="/catalogo/catalogo.html" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Catálogo Completo</h3>
+                <span class="category-count">Todos los juegos</span>
+            </a>
+            <a href="/navegacion/juegos-destacados.html" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3>Juegos Destacados</h3>
+                <span class="category-count">Los más populares</span>
+            </a>
+            <a href="/navegacion/ofertas-especiales.html" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-tags"></i>
+                </div>
+                <h3>Ofertas Especiales</h3>
+                <span class="category-count">Mejores descuentos</span>
+            </a>
+            <a href="/navegacion/exclusivos-ps5.html" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Exclusivos PS5</h3>
+                <span class="category-count">Solo en PlayStation</span>
+            </a>
+            <a href="/navegacion/proximos-lanzamientos.html" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Próximos Lanzamientos</h3>
+                <span class="category-count">Reserva ahora</span>
+            </a>
+            <a href="/navegacion/blog.html" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <h3>Blog y Noticias</h3>
+                <span class="category-count">Últimas novedades</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Ofertas Especiales -->
+<section class="offers section">
+    <div class="container">
+        <div class="section-header">
+            <h2>OFERTAS <span class="accent">ESPECIALES</span></h2>
+            <a href="/navegacion/ofertas-especiales.html" class="view-all">Ver todas <i
+                    class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="offers-grid">
+            <div class="offer-card">
+                <div class="offer-timer">
+                    <i class="fas fa-clock"></i>
+                    <span class="countdown" data-time="86400">24:00:00</span>
+                </div>
+                <div class="offer-image-container">
+                    <img src="img/juegos/1740506597-the-witcher-3-wild-hunt-ps5-0.webp" alt="The Witcher 3"
+                        class="offer-image">
+                </div>
+                <div class="offer-content">
+                    <h3>The Witcher 3: Wild Hunt</h3>
+                    <div class="offer-prices">
+                        <span class="original-price">S/. 159.00</span>
+                        <span class="discount-price">S/. 79.50</span>
+                        <span class="discount-tag">-50%</span>
+                    </div>
+                    <button class="btn btn-primary btn-block btn-cart" data-id="the-witcher-3" data-name="The Witcher 3: Wild Hunt" data-price="S/. 79.50" data-image="/img/juegos/1740506597-the-witcher-3-wild-hunt-ps5-0.webp">Comprar ahora</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <div class="offer-timer">
+                    <i class="fas fa-clock"></i>
+                    <span class="countdown" data-time="172800">48:00:00</span>
+                </div>
+                <div class="offer-image-container">
+                    <img src="img/juegos2/1727476960-cyberpunk-2077-ultimate-edition-ps5-0.webp" alt="Cyberpunk 2077"
+                        class="offer-image">
+                </div>
+                <div class="offer-content">
+                    <h3>Cyberpunk 2077</h3>
+                    <div class="offer-prices">
+                        <span class="original-price">S/. 149.00</span>
+                        <span class="discount-price">S/. 89.40</span>
+                        <span class="discount-tag">-40%</span>
+                    </div>
+                    <button class="btn btn-primary btn-block btn-cart" data-id="cyberpunk-2077" data-name="Cyberpunk 2077" data-price="S/. 89.40" data-image="/img/juegos2/1727476960-cyberpunk-2077-ultimate-edition-ps5-0.webp">Comprar ahora</button>
+                </div>
+            </div>
+            <div class="offer-card">
+                <div class="offer-timer">
+                    <i class="fas fa-clock"></i>
+                    <span class="countdown" data-time="259200">72:00:00</span>
+                </div>
+                <div class="offer-image-container">
+                    <img src="img/juegos2/1646845135-bloodborne-game-of-the-year-edition-ps5.jpg" alt="Bloodborne"
+                        class="offer-image">
+                </div>
+                <div class="offer-content">
+                    <h3>Bloodborne GOTY Edition</h3>
+                    <div class="offer-prices">
+                        <span class="original-price">S/. 129.00</span>
+                        <span class="discount-price">S/. 64.50</span>
+                        <span class="discount-tag">-50%</span>
+                    </div>
+                    <button class="btn btn-primary btn-block btn-cart" data-id="bloodborne" data-name="Bloodborne GOTY Edition" data-price="S/. 64.50" data-image="/img/juegos2/1646845135-bloodborne-game-of-the-year-edition-ps5.jpg">Comprar ahora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Próximos Lanzamientos -->
+<section class="upcoming section">
+    <div class="container">
+        <div class="section-header">
+            <h2>PRÓXIMOS <span class="accent">LANZAMIENTOS</span></h2>
+            <a href="/navegacion/proximos-lanzamientos.html" class="view-all">Ver todos <i
+                    class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="upcoming-grid">
+            <div class="upcoming-card">
+                <div class="upcoming-image-container">
+                    <img src="img/juegos/1727472891-dragon-age-dreadwolf-ps5-pre-orden-0.webp"
+                        alt="Dragon Age: Dreadwolf" class="upcoming-image">
+                    <div class="upcoming-date">
+                        <span class="day">15</span>
+                        <span class="month">DIC</span>
+                    </div>
+                </div>
+                <div class="upcoming-info">
+                    <h3>Dragon Age: Dreadwolf</h3>
+                    <div class="upcoming-editions">
+                        <span>Edición Estándar</span>
+                        <span>Edición Deluxe</span>
+                        <span>Edición Coleccionista</span>
+                    </div>
+                    <button class="btn btn-secondary btn-block preorder-btn" data-id="dragon-age-dreadwolf" data-name="Dragon Age: Dreadwolf" data-price="S/. 269.90" data-image="img/juegos/1727472891-dragon-age-dreadwolf-ps5-pre-orden-0.webp">Pre-ordenar</button>
+                </div>
+            </div>
+            <div class="upcoming-card">
+                <div class="upcoming-image-container">
+                    <img src="img/juegos/1715874649-assassins-creed-shadows-ps5-pre-orden-0.webp"
+                        alt="Assassin's Creed Shadows" class="upcoming-image">
+                    <div class="upcoming-date">
+                        <span class="day">22</span>
+                        <span class="month">NOV</span>
+                    </div>
+                </div>
+                <div class="upcoming-info">
+                    <h3>Assassin's Creed Shadows</h3>
+                    <div class="upcoming-editions">
+                        <span>Edición Estándar</span>
+                        <span>Edición Deluxe</span>
+                        <span>Edición Coleccionista</span>
+                    </div>
+                    <button class="btn btn-secondary btn-block preorder-btn" data-id="assassins-creed-shadows" data-name="Assassin's Creed Shadows" data-price="S/. 289.90" data-image="img/juegos/1715874649-assassins-creed-shadows-ps5-pre-orden-0.webp">Pre-ordenar</button>
+                </div>
+            </div>
+            <div class="upcoming-card">
+                <div class="upcoming-image-container">
+                    <img src="img/juegos/1727997956-horizon-zero-dawn-remastered-ps5-pre-orden-0.webp"
+                        alt="Horizon Zero Dawn Remastered" class="upcoming-image">
+                    <div class="upcoming-date">
+                        <span class="day">31</span>
+                        <span class="month">OCT</span>
+                    </div>
+                </div>
+                <div class="upcoming-info">
+                    <h3>Horizon Zero Dawn Remastered</h3>
+                    <div class="upcoming-editions">
+                        <span>Edición Estándar</span>
+                        <span>Edición Digital Deluxe</span>
+                    </div>
+                    <button class="btn btn-secondary btn-block preorder-btn" data-id="horizon-zero-dawn-remastered" data-name="Horizon Zero Dawn Remastered" data-price="S/. 249.90" data-image="img/juegos/1727997956-horizon-zero-dawn-remastered-ps5-pre-orden-0.webp">Pre-ordenar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Exclusivos PS5 -->
+<section class="exclusives section">
+    <div class="container">
+        <div class="section-header">
+            <h2>EXCLUSIVOS <span class="accent">PS5</span></h2>
+            <a href="/navegacion/exclusivos-ps5.html" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="exclusives-showcase">
+            <div class="exclusives-featured">
+                <div class="featured-game-image">
+                    <img src="img/imgjuegos/spiderman/spider-man-2-screenshot-story-duo-4k-legal-13jul23.webp"
+                        alt="Spider-Man 2">
+                </div>
+                <div class="featured-game-info">
+                    <h3>Marvel's Spider-Man 2</h3>
+                    <p>Peter Parker y Miles Morales regresan en una nueva aventura épica en la Nueva York de Marvel.</p>
+                    <div class="featured-game-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>Jugadores: 1</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Acción/Aventura</span>
+                        </div>
+                    </div>
+                    <div class="featured-game-actions">
+                        <a href="/producto.html?id=marvels-spider-man-2" class="btn btn-primary">Comprar ahora</a>
+                        <a href="https://www.youtube.com/watch?v=rCIV0y8jNy4&ab_channel=PlayStationLatinoam%C3%A9rica" class="btn btn-secondary">Ver trailer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="exclusives-grid">
+                <div class="exclusive-card">
+                    <img src="/img/juegos/1707352092-stellar-blade-ps5-pre-orden-0.png" alt="Stellar Blade">
+                    <div class="exclusive-card-overlay">
+                        <h4>Stellar Blade</h4>
+                        <a href="/producto.html?id=stellar-blade" class="btn-small">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="exclusive-card">
+                    <img src="img/juegos/1701964990-the-last-of-us-part-ii-remastered-ps5-pre-orden-0.jpg"
+                        alt="The Last of Us Part II Remastered">
+                    <div class="exclusive-card-overlay">
+                        <h4>The Last of Us Part II Remastered</h4>
+                        <a href="/producto.html?id=the-last-of-us-part-2-remastered" class="btn-small">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="exclusive-card">
+                    <img src="img/juegos/1674068125-final-fantasy-vii-rebirth-ps5-pre-orden-0.jpg"
+                        alt="Final Fantasy VII Rebirth">
+                    <div class="exclusive-card-overlay">
+                        <h4>Final Fantasy VII Rebirth</h4>
+                        <a href="/producto.html?id=final-fantasy-vii" class="btn-small">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="exclusive-card">
+                    <img src="/img/juegos/1675969170-hogwarts-legacy-digital-deluxe-edition-pre-orden-ps5-0.jpg"
+                        alt="Hogwarts Legacy">
+                    <div class="exclusive-card-overlay">
+                        <h4>Hogwarts Legacy</h4>
+                        <a href="/producto.html?id=hogwarts-legacy" class="btn-small">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reseñas y Testimonios -->
+<section class="reviews section">
+    <div class="container">
+        <div class="section-header">
+            <h2>RESEÑAS DE <span class="accent">JUGADORES</span></h2>
+        </div>
+        <div class="reviews-slider cyberpunk-style">
+            <div class="review-card active" data-game="spiderman">
+                <div class="card-glare"></div>
+                <div class="card-hologram"></div>
+                <div class="review-header">
+                    <div class="reviewer-badge">
+                        <div class="reviewer-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Mendoza">
+                            <div class="verified-badge">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="reviewer-level">Nivel 45</div>
+                    </div>
+                    <div class="reviewer-info">
+                        <h4>Carlos Mendoza <span class="gamer-tag">@ShadowHunter</span></h4>
+                        <div class="review-stats">
+                            <div class="review-rating">
+                                <span class="rating-value">5.0</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="playtime">
+                                <i class="fas fa-clock"></i> 85+ horas
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <div class="review-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Spider-Man 2 es simplemente espectacular. La fluidez del combate, los gráficos y la historia
+                            son de otro nivel.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="review-tags">
+                        <span class="tag">Combate fluido</span>
+                        <span class="tag">Gráficos impresionantes</span>
+                        <span class="tag">Historia envolvente</span>
+                    </div>
+                </div>
+                <div class="review-game">
+                    <div class="game-poster">
+                        <img src="img/juegos/1697557602-marvels-spider-man-2-ps5-pre-orden-0.jpg" alt="Spider-Man 2">
+                        <div class="game-rating">9.8/10</div>
+                    </div>
+                    <div class="game-info">
+                        <h5>Spider-Man 2</h5>
+                        <div class="platform-badge ps5">PS5</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+                        <div class="completion">Completado al 98%</div>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <div class="review-date">Publicado: 15/05/2024</div>
+                    <div class="review-actions">
+                        <button class="like-btn"><i class="far fa-thumbs-up"></i> 124</button>
+                        <button class="comment-btn"><i class="far fa-comment"></i> 23</button>
+                        <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card" data-game="wukong">
+                <div class="card-glare"></div>
+                <div class="card-hologram"></div>
+                <div class="review-header">
+                    <div class="reviewer-badge">
+                        <div class="reviewer-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Laura Sánchez">
+                        </div>
+                        <div class="reviewer-level">Nivel 32</div>
+                    </div>
+                    <div class="reviewer-info">
+                        <h4>Laura Sánchez <span class="gamer-tag">@DragonSlayer</span></h4>
+                        <div class="review-stats">
+                            <div class="review-rating">
+                                <span class="rating-value">4.5</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <div class="playtime">
+                                <i class="fas fa-clock"></i> 62+ horas
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <div class="review-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Black Myth: Wukong es una obra maestra visual. El combate es desafiante pero justo, y la
+                            ambientación basada en la mitología china es fascinante.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="review-tags">
+                        <span class="tag">Arte impresionante</span>
+                        <span class="tag">Combate desafiante</span>
+                        <span class="tag">Cultura china</span>
+                    </div>
+                </div>
+                <div class="review-game">
+                    <div class="game-poster">
+                        <img src="img/juegos/1718149460-black-myth-wukong-ps5-pre-orden-0.jpg" alt="Black Myth: Wukong">
+                        <div class="game-rating">9.3/10</div>
+                    </div>
+                    <div class="game-info">
+                        <h5>Black Myth: Wukong</h5>
+                        <div class="platform-badge ps5">PS5</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <div class="completion">Completado al 85%</div>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <div class="review-date">Publicado: 10/05/2024</div>
+                    <div class="review-actions">
+                        <button class="like-btn"><i class="far fa-thumbs-up"></i> 98</button>
+                        <button class="comment-btn"><i class="far fa-comment"></i> 15</button>
+                        <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card" data-game="stellar">
+                <div class="card-glare"></div>
+                <div class="card-hologram"></div>
+                <div class="review-header">
+                    <div class="reviewer-badge">
+                        <div class="reviewer-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Miguel Ángel Torres">
+                            <div class="verified-badge">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="reviewer-level">Nivel 78</div>
+                    </div>
+                    <div class="reviewer-info">
+                        <h4>Miguel Ángel Torres <span class="gamer-tag">@StellarNinja</span></h4>
+                        <div class="review-stats">
+                            <div class="review-rating">
+                                <span class="rating-value">4.0</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="playtime">
+                                <i class="fas fa-clock"></i> 120+ horas
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <div class="review-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Stellar Blade tiene un combate fluido y desafiante, con una dirección artística
+                            impresionante. La historia podría ser más profunda, pero la jugabilidad compensa cualquier
+                            defecto.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="review-tags">
+                        <span class="tag">Combate fluido</span>
+                        <span class="tag">Arte impresionante</span>
+                        <span class="tag">Jugabilidad sólida</span>
+                    </div>
+                </div>
+                <div class="review-game">
+                    <div class="game-poster">
+                        <img src="img/imgjuegos/stellar/stellar-blade-screenshot-01-en-06feb23.webp"
+                            alt="Stellar Blade">
+                        <div class="game-rating">8.7/10</div>
+                    </div>
+                    <div class="game-info">
+                        <h5>Stellar Blade</h5>
+                        <div class="platform-badge ps5">PS5</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                        <div class="completion">Completado al 100%</div>
+                    </div>
+                </div>
+                <div class="review-footer">
+                    <div class="review-date">Publicado: 05/05/2024</div>
+                    <div class="review-actions">
+                        <button class="like-btn"><i class="far fa-thumbs-up"></i> 156</button>
+                        <button class="comment-btn"><i class="far fa-comment"></i> 42</button>
+                        <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trust-badges">
+            <div class="badge">
+                <i class="fas fa-truck"></i>
+                <h4>Envío Gratis</h4>
+                <p>En compras mayores a S/. 199</p>
+            </div>
+            <div class="badge">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Garantía Oficial</h4>
+                <p>Productos 100% originales</p>
+            </div>
+            <div class="badge">
+                <i class="fas fa-undo"></i>
+                <h4>Devolución Fácil</h4>
+                <p>30 días para cambios</p>
+            </div>
+            <div class="badge">
+                <i class="fas fa-lock"></i>
+                <h4>Pago Seguro</h4>
+                <p>Transacciones protegidas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog o Noticias -->
+<section class="blog section">
+    <div class="container">
+        <div class="section-header">
+            <h2>ÚLTIMAS <span class="accent">NOTICIAS</span></h2>
+            <a href="/navegacion/blog.html" class="view-all">Ver todas <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="/img/noticias/ps5-pro-precio-caracteristicas-fecha-de-lanzamiento-playstation5-pro.webp"
+                        alt="PS5 Pro">
+                    <div class="blog-date">
+                        <span class="day">15</span>
+                        <span class="month">SEP</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Noticias</div>
+                    <h3>Sony anuncia oficialmente PS5 Pro: Todo lo que debes saber</h3>
+                    <p>La nueva consola promete gráficos mejorados, mayor rendimiento y compatibilidad con todos los
+                        juegos de PS5.</p>
+                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="img/noticias/1200_800.webp" alt="God of War Ragnarök DLC">
+                    <div class="blog-date">
+                        <span class="day">10</span>
+                        <span class="month">SEP</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">Lanzamientos</div>
+                    <h3>God of War Ragnarök recibirá nuevo DLC gratuito este mes</h3>
+                    <p>Santa Monica Studio sorprende a los fans con contenido adicional que expandirá la historia de
+                        Kratos y Atreus.</p>
+                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="blog-card">
+                <div class="blog-image">
+                    <img src="img/noticias/todos-juegos-playstation-studios-2025-alla-4185975.webp"
+                        alt="PS Plus Octubre">
+                    <div class="blog-date">
+                        <span class="day">28</span>
+                        <span class="month">AGO</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-category">PS Plus</div>
+                    <h3>Filtrados los juegos de PS Plus para octubre 2025</h3>
+                    <p>La lista incluye títulos AAA recientes y sorpresas para los suscriptores de todos los niveles del
+                        servicio.</p>
+                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <div class="newsletter-info">
+                <h2>¡MANTENTE <span class="accent">INFORMADO!</span></h2>
+                <p>Suscríbete para recibir noticias sobre lanzamientos, ofertas exclusivas y contenido especial.</p>
+                <div class="newsletter-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-gift"></i>
+                        <span>10% OFF en tu primera compra</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-bell"></i>
+                        <span>Alertas de stock de PS5</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-tag"></i>
+                        <span>Acceso a ofertas exclusivas</span>
+                    </div>
+                </div>
+            </div>
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                </div>
+                <div class="form-privacy">
+                    <input type="checkbox" id="privacy" required>
+                    <label for="privacy">Acepto recibir comunicaciones comerciales y he leído la <a href="#">política de
+                            privacidad</a></label>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                    <span class="logo-text">GAME<span class="accent">ZONE</span></span>
+                </div>
+                <p>Tu tienda especializada en videojuegos y accesorios para PlayStation 5. Ofrecemos los mejores
+                    títulos, al mejor precio y con la mejor atención.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Exclusivos PS5</a></li>
+                    <li><a href="#">Pre-órdenes</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ayuda & Soporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Envíos y Entregas</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima</li>
+                    <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@gamezone.pe</li>
+                    <li><i class="fas fa-clock"></i> Lun-Vie: 9am-7pm | Sáb: 10am-5pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="payment-methods">
+                <h3>Métodos de Pago</h3>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <img src="/img/noticias/ICONOS-yape-para-pagina-png.webp" alt="Yape">
+                    <img src="img/noticias/images.jpeg" alt="Plin">
+                </div>
+            </div>
+            <div class="security-badges">
+                <h3>Compra Segura</h3>
+                <div class="security-icons">
+                    <img src="img/payment/ssl.jpg" alt="SSL">
+                    <img src="img/payment/9721115.png" alt="Pago Seguro">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+            <div class="language-selector">
+                <select>
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/indexPrincipal/js/animations.js"></script>
+<script src="/indexPrincipal/js/countdown.js"></script>
+<script src="/indexPrincipal/js/filters.js"></script>
+<script src="/indexPrincipal/js/slider.js"></script>
+<script src="/indexPrincipal/js/reviews.js"></script>
+<script src="/script/main.js" defer></script>
+<script src="/busqueda/search.js" defer></script>
+<script src="/busqueda/resultados.js" defer></script>
+<script src="/script/preorder-manager.js" defer></script>
+<script src="/script/ofertas-index.js" defer></script>
+</body>
+
+</html>

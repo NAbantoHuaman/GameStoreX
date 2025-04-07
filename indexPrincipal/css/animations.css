@@ -1,0 +1,339 @@
+/* animations.css - Efectos y animaciones para el tema Cyberpunk */
+
+/* Efecto de glitch para textos */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+        text-shadow: 0 0 0 transparent;
+    }
+    2% {
+        transform: translate(-2px, 0);
+        text-shadow: -2px 0 var(--color-primary);
+    }
+    4% {
+        transform: translate(2px, 0);
+        text-shadow: 2px 0 var(--color-secondary);
+    }
+    5% {
+        transform: translate(-2px, 0);
+        text-shadow: -2px 0 var(--color-tertiary);
+    }
+    6% {
+        transform: translate(0);
+        text-shadow: 0 0 0 transparent;
+    }
+    100% {
+        transform: translate(0);
+        text-shadow: 0 0 0 transparent;
+    }
+}
+
+/* Efecto de neón pulsante */
+@keyframes neonPulse {
+    0% {
+        text-shadow: var(--neon-shadow-primary);
+        box-shadow: var(--neon-shadow-primary);
+    }
+    50% {
+        text-shadow: 0 0 5px rgba(0, 243, 255, 0.5), 0 0 10px rgba(0, 243, 255, 0.3);
+        box-shadow: 0 0 5px rgba(0, 243, 255, 0.5), 0 0 10px rgba(0, 243, 255, 0.3);
+    }
+    100% {
+        text-shadow: var(--neon-shadow-primary);
+        box-shadow: var(--neon-shadow-primary);
+    }
+}
+
+/* Efecto de neón secundario pulsante */
+@keyframes neonPulseSecondary {
+    0% {
+        text-shadow: var(--neon-shadow-secondary);
+        box-shadow: var(--neon-shadow-secondary);
+    }
+    50% {
+        text-shadow: 0 0 5px rgba(255, 0, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.3);
+        box-shadow: 0 0 5px rgba(255, 0, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.3);
+    }
+    100% {
+        text-shadow: var(--neon-shadow-secondary);
+        box-shadow: var(--neon-shadow-secondary);
+    }
+}
+
+/* Efecto de neón acento pulsante */
+@keyframes neonPulseAccent {
+    0% {
+        text-shadow: var(--neon-shadow-accent);
+        box-shadow: var(--neon-shadow-accent);
+    }
+    50% {
+        text-shadow: 0 0 5px rgba(255, 0, 102, 0.5), 0 0 10px rgba(255, 0, 102, 0.3);
+        box-shadow: 0 0 5px rgba(255, 0, 102, 0.5), 0 0 10px rgba(255, 0, 102, 0.3);
+    }
+    100% {
+        text-shadow: var(--neon-shadow-accent);
+        box-shadow: var(--neon-shadow-accent);
+    }
+}
+
+/* Efecto de líneas de escaneo */
+@keyframes scanlines {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+/* Efecto de parpadeo */
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+        opacity: 1;
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.5;
+    }
+}
+
+/* Efecto de desplazamiento de fondo */
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Efecto de rotación */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efecto de preloader */
+@keyframes loaderRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderDash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+}
+
+/* Efecto de partículas flotantes */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Efecto de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Efecto de deslizamiento */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Clases de animación */
+.glitch-text {
+    position: relative;
+    display: inline-block;
+    animation: glitch 5s infinite;
+}
+
+.neon-text {
+    animation: neonPulse 2s infinite;
+}
+
+.neon-text-secondary {
+    animation: neonPulseSecondary 2s infinite;
+}
+
+.neon-text-accent {
+    animation: neonPulseAccent 2s infinite;
+}
+
+.neon-border {
+    position: relative;
+}
+
+.neon-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--color-primary);
+    border-radius: inherit;
+    animation: neonPulse 2s infinite;
+    pointer-events: none;
+}
+
+.neon-border-secondary::before {
+    border-color: var(--color-secondary);
+    animation: neonPulseSecondary 2s infinite;
+}
+
+.neon-border-accent::before {
+    border-color: var(--color-accent);
+    animation: neonPulseAccent 2s infinite;
+}
+
+/* Efecto de líneas de escaneo */
+.scan-lines {
+    position: relative;
+    overflow: hidden;
+}
+
+.scan-lines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 243, 255, var(--scan-line-opacity)) 50%
+    );
+    background-size: 100% var(--scan-line-spacing);
+    pointer-events: none;
+    animation: scanlines 10s linear infinite;
+    z-index: 2;
+}
+
+/* Efecto de parpadeo */
+.flicker {
+    animation: flicker 3s linear infinite;
+}
+
+/* Efecto de desplazamiento de fondo */
+.bg-shift {
+    background-size: 200% 200%;
+    animation: backgroundShift 5s ease infinite;
+}
+
+/* Efecto de rotación */
+.rotate {
+    animation: rotate 10s linear infinite;
+}
+
+/* Efecto de partículas flotantes */
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Efectos de desvanecimiento */
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+/* Efectos de deslizamiento */
+.slide-in-left {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.slide-in-up {
+    animation: slideInUp 0.5s ease forwards;
+}
+
+.slide-in-down {
+    animation: slideInDown 0.5s ease forwards;
+}

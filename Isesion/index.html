@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso GameStore - Tu Portal Gaming</title>
+    <meta name="description"
+        content="Inicia sesión o regístrate en GameStore para acceder a ofertas exclusivas y gestionar tus compras de videojuegos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">🎮 GameStore</div>
+            <p class="tagline">Tu portal gaming definitivo</p>
+        </div>
+
+        <div class="form-container">
+            <form id="loginForm" class="form">
+                <h2 class="form-title">Iniciar Sesión</h2>
+                <div class="input-span">
+                    <label for="loginEmail" class="label">Email</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" name="email" id="loginEmail" placeholder="ejemplo@correo.com" required>
+                    </div>
+                </div>
+                <div class="input-span">
+                    <label for="loginPassword" class="label">Contraseña</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" name="password" id="loginPassword" placeholder="Contraseña" required>
+                        <i class="fas fa-eye toggle-password" data-target="loginPassword"></i>
+                    </div>
+                </div>
+                <div class="remember-forgot">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Recordarme</label>
+                    </div>
+                    <a href="#" class="forgot-password" id="forgotPasswordLink">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="submit">
+                    <span>Iniciar Sesión</span>
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <div class="social-login">
+                    <p>O inicia sesión con</p>
+                    <div class="social-icons">
+                        <button type="button" class="social-btn google">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button type="button" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button type="button" class="social-btn twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <span class="span">¿No tienes una cuenta? <a href="#" id="showRegisterForm">Regístrate</a></span>
+                </div>
+                <div id="loginMessage" class="message"></div>
+            </form>
+
+            <form id="registerForm" class="form" style="display: none;">
+                <h2 class="form-title">Registro</h2>
+                <div class="input-span">
+                    <label for="registerName" class="label">Nombre completo</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="text" name="name" id="registerName" placeholder="Tu nombre completo" required>
+                    </div>
+                </div>
+                <div class="input-span">
+                    <label for="registerEmail" class="label">Email</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" name="email" id="registerEmail" placeholder="ejemplo@correo.com" required>
+                    </div>
+                </div>
+                <div class="input-span">
+                    <label for="registerPassword" class="label">Contraseña</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" name="password" id="registerPassword" placeholder="Contraseña" required>
+                        <i class="fas fa-eye toggle-password" data-target="registerPassword"></i>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-meter">
+                            <div class="strength-bar"></div>
+                        </div>
+                        <span class="strength-text">Fuerza de contraseña</span>
+                    </div>
+                </div>
+                <div class="input-span">
+                    <label for="confirmPassword" class="label">Confirmar Contraseña</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" name="confirmPassword" id="confirmPassword"
+                            placeholder="Confirmar Contraseña" required>
+                        <i class="fas fa-eye toggle-password" data-target="confirmPassword"></i>
+                    </div>
+                </div>
+                <div class="terms">
+                    <input type="checkbox" id="termsCheck" required>
+                    <label for="termsCheck">Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política
+                            de Privacidad</a></label>
+                </div>
+                <button type="submit" class="submit">
+                    <span>Crear Cuenta</span>
+                    <i class="fas fa-user-plus"></i>
+                </button>
+                <div class="form-footer">
+                    <span class="span">¿Ya tienes una cuenta? <a href="#" id="showLoginForm">Iniciar Sesión</a></span>
+                </div>
+                <div id="registerMessage" class="message"></div>
+            </form>
+        </div>
+    </div>
+
+    <div class="neon-particles" id="neonParticles"></div>
+    <div class="neon-grid"></div>
+
+    <footer class="login-footer">
+        <p>&copy; 2025 GameStore - Todos los derechos reservados</p>
+        <a href="/new_index.html">Volver a la tienda</a>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

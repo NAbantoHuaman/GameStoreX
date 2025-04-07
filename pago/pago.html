@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Perfil - GameStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/indexPrincipal/css/main.css" />
+    <link rel="stylesheet" href="/pago/pago.css" />
+    <link rel="stylesheet" href="/carrito/preorder-cart.css" />
+    <link rel="stylesheet" href="/busqueda/search-dropdown.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                    <span class="logo-text">GAME<span class="accent">STORE</span></span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="/new_index.html">Inicio</a></li>
+                    <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                    <li><a href="/nosotros/nosotros.html" class="active">Nosotros</a></li>
+                    <li><a href="/navegacion/blog.html">Blog</a></li>
+                    <li><a href="/soporte/soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar juegos..." />
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="/Isesion/index.html" class="user-icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-title">
+        <h2 class="payment-title">
+            FINALIZAR <span class="accent">COMPRA</span>
+        </h2>
+    </div>
+
+    <main class="payment-container">
+        <div class="payment-section">
+            <h3 class="payment-title">
+                Información de <span class="accent">PAGO</span>
+            </h3>
+            <div class="payment-methods">
+                <div class="payment-method active" data-method="credit-card">
+                    <img src="/img/pago/Tarjetas-2.jpg" alt="Tarjeta de Crédito" />
+                    <p class="payment-method-title">Tarjeta de Crédito</p>
+                </div>
+                <div class="payment-method" data-method="paypal">
+                    <img src="/img/pago/unnamed.png" alt="PayPal" />
+                    <p class="payment-method-title">PayPal</p>
+                </div>
+                <div class="payment-method" data-method="transfer">
+                    <img src="/img/pago/8043680.png" alt="Transferencia" />
+                    <p class="payment-method-title">Transferencia</p>
+                </div>
+            </div>
+
+            <form id="payment-form" novalidate>
+                <!-- Campo oculto para el método de pago -->
+                <input type="hidden" id="payment-method-input" name="payment-method" value="credit-card" />
+
+                <div id="credit-card-fields">
+                    <div class="form-group">
+                        <label for="card-name">Nombre en la tarjeta <span class="required">*</span></label>
+                        <input type="text" id="card-name" placeholder="Nombre completo como aparece en la tarjeta"
+                            required autocomplete="cc-name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number">Número de tarjeta <span class="required">*</span></label>
+                        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX" required
+                            autocomplete="cc-number" inputmode="numeric" maxlength="19" />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-date">Fecha de expiración <span class="required">*</span></label>
+                            <input type="text" id="expiry-date" placeholder="MM/AA" required autocomplete="cc-exp"
+                                inputmode="numeric" maxlength="5" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cvv">Código de seguridad (CVV)
+                                <span class="required">*</span></label>
+                            <input type="text" id="cvv" placeholder="XXX" required autocomplete="cc-csc"
+                                inputmode="numeric" maxlength="4" />
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="payment-title">
+                    Dirección de <span class="accent">FACTURACIÓN</span>
+                </h3>
+
+                <div class="form-group">
+                    <label for="full-name">Nombre completo <span class="required">*</span></label>
+                    <input type="text" id="full-name" placeholder="Tu nombre completo" required autocomplete="name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Dirección <span class="required">*</span></label>
+                    <input type="text" id="address" placeholder="Calle, número, piso, etc." required
+                        autocomplete="street-address" />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Ciudad <span class="required">*</span></label>
+                        <input type="text" id="city" placeholder="Tu ciudad" required autocomplete="address-level2" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postal-code">Código Postal <span class="required">*</span></label>
+                        <input type="text" id="postal-code" placeholder="XXXXX" required autocomplete="postal-code"
+                            inputmode="numeric" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">País <span class="required">*</span></label>
+                    <select id="country" required autocomplete="country">
+                        <option value="">Selecciona un país</option>
+                        <option value="pe">Perú</option>
+                        <option value="es">España</option>
+                        <option value="mx">México</option>
+                        <option value="co">Colombia</option>
+                        <option value="ar">Argentina</option>
+                        <option value="cl">Chile</option>
+                    </select>
+                </div>
+
+                <!-- Campo oculto para el total del pedido -->
+                <input type="hidden" id="order-total" name="order-total" value="240.89" />
+
+                <div class="secure-payment">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="24"
+                        height="24">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    Pago seguro con encriptación SSL de 256 bits
+                </div>
+            </form>
+        </div>
+
+        <div class="payment-section">
+            <h3 class="payment-title">
+                Resumen del <span class="accent">PEDIDO</span>
+            </h3>
+
+            <div class="order-summary">
+                <!-- Los elementos del carrito se cargarán dinámicamente con JavaScript -->
+            </div>
+
+            <!-- Botones de acción con el mismo estilo que en carrito.html -->
+            <button class="checkout-btn confirm-btn" type="submit" form="payment-form">
+                Confirmar Pago
+            </button>
+            <a href="/principal/pages/carrito.html" class="continue-shopping">← Volver al Carrito</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                        <span class="logo-text">GAME<span class="accent">ZONE</span></span>
+                    </div>
+                    <p>
+                        Tu tienda especializada en videojuegos y accesorios para
+                        PlayStation 5. Ofrecemos los mejores títulos, al mejor precio y
+                        con la mejor atención.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Catálogo</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Exclusivos PS5</a></li>
+                        <li><a href="#">Pre-órdenes</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ayuda & Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Envíos y Entregas</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima
+                        </li>
+                        <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@gamezone.pe</li>
+                        <li>
+                            <i class="fas fa-clock"></i> Lun-Vie: 9am-7pm | Sáb: 10am-5pm
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="payment-methods">
+                    <h3>Métodos de Pago</h3>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <img src="/img/noticias/ICONOS-yape-para-pagina-png.webp" alt="Yape" />
+                        <img src="img/noticias/images.jpeg" alt="Plin" />
+                    </div>
+                </div>
+                <div class="security-badges">
+                    <h3>Compra Segura</h3>
+                    <div class="security-icons">
+                        <img src="img/payment/ssl.jpg" alt="SSL" />
+                        <img src="img/payment/9721115.png" alt="Pago Seguro" />
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+                <div class="language-selector">
+                    <select>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/busqueda/search.js" defer></script>
+    <script src="/busqueda/resultados.js" defer></script>
+    <script src="/pago/pago.js" defer></script>
+    <script src="/script/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+/* hero.css - Estilos para la sección Hero con tema Cyberpunk */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    margin-top: 0;
+    overflow: hidden;
+    background-color: var(--color-bg-darker);
+}
+
+/* Slider */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+/* Fondo de slide con video */
+.slide-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Fondo de slide con imagen */
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: scale(1.05);
+    transition: transform 6s ease;
+}
+
+.slide.active .slide-image {
+    transform: scale(1);
+}
+
+/* Overlay para mejorar legibilidad */
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(5, 5, 8, 0.8), rgba(5, 5, 8, 0.4));
+    z-index: 2;
+}
+
+.slide-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 243, 255, var(--scan-line-opacity)) 50%
+    );
+    background-size: 100% var(--scan-line-spacing);
+    pointer-events: none;
+    animation: scanlines 10s linear infinite;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Contenido del slide */
+.slide-content {
+    position: relative;
+    z-index: 3;
+    max-width: 650px;
+    padding-top: 80px;
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 0 10px rgba(255, 0, 102, 0.5);
+}
+
+.slide-content h1 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.1;
+    color: #fff;
+}
+
+.slide-content p {
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    margin-bottom: var(--spacing-lg);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 90%;
+}
+
+/* Botones del slide */
+.slide-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+    max-width: 500px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    flex: 1;
+    min-width: 180px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-button);
+    z-index: -1;
+    transition: var(--transition-normal);
+}
+
+/* Botón primario - ahora igual al secundario */
+/* Estado normal - Texto blanco (igual que el secundario) */
+.btn-primary {
+    color: white; /* Texto blanco (antes era --color-primary) */
+    background-color: transparent;
+    border: 1px solid var(--color-primary); /* Borde azul claro */
+    backdrop-filter: none;
+    box-shadow: none;
+}
+
+/* Hover - Mantenemos el mismo estilo (fondo azul, texto negro) */
+.btn-primary:hover {
+    background-color: var(--color-primary); /* Fondo azul claro */
+    color: var(--color-bg-darker); /* Texto negro (--color-bg-darker debe ser un color oscuro) */
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+/* Eliminamos el gradiente (si estaba afectando) */
+.btn-primary::before {
+    content: none;
+}
+.btn-secondary {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg-darker);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+/* Etiqueta promocional */
+.promo-tag {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: rgba(255, 255, 0, 0.2);
+    border: 1px solid var(--color-tertiary);
+    color: var(--color-tertiary);
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--border-radius-sm);
+    animation: neonPulse 2s infinite;
+}
+
+/* Controles del slider */
+.slider-controls {
+    position: absolute;
+    bottom: var(--spacing-xl);
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    z-index: 10;
+}
+
+.prev-slide,
+.next-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(10, 10, 18, 0.6);
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.prev-slide:hover,
+.next-slide:hover {
+    background-color: var(--color-primary);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+.slider-dots {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.dot:hover {
+    background-color: rgba(0, 243, 255, 0.3);
+}
+
+.dot.active {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero {
+        height: 80vh;
+    }
+    
+    .slide-content {
+        max-width: 550px;
+    }
+    
+    .slide-content h1 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .slide-content p {
+        font-size: var(--font-size-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+    
+    .slide-content {
+        max-width: 450px;
+        padding-top: 60px;
+    }
+    
+    .slide-content h1 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .slide-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh;
+        min-height: 500px;
+    }
+    
+    .slide-content {
+        max-width: 100%;
+        padding-top: 50px;
+    }
+    
+    .slide-content h1 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .slide-content p {
+        font-size: var(--font-size-sm);
+    }
+    
+    .slider-controls {
+        bottom: var(--spacing-lg);
+    }
+    
+    .prev-slide,
+    .next-slide {
+        width: 36px;
+        height: 36px;
+        font-size: var(--font-size-xs);
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}

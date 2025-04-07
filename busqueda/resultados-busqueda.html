@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone | Tu tienda de videojuegos PS5</title>
+    <!-- Fuentes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/indexPrincipal/css/main.css">
+    <link rel="stylesheet" href="/busqueda/resultados.css">
+    <link rel="stylesheet" href="search-dropdown.css">
+</head>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="/new_index.html">
+                <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                <span class="logo-text">GAME<span class="accent">STORE</span></span>
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="/new_index.html">Inicio</a></li>
+                <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                <li><a href="/navegacion/ofertas-especiales.html">Ofertas</a></li>
+                <li><a href="/navegacion/exclusivos-ps5.html">Exclusivos</a></li>
+                <li><a href="/navegacion/blog.html">Blog</a></li>
+                <li><a href="/soporte/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Buscar en el header -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar juegos...">
+                <button id="searchButton" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <a href="/carrito/carrito.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="/Isesion/index.html" class="user-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Sección principal -->
+<section class="section">
+    <div class="search-results-container">
+        <div class="section-header">
+            <h2 id="resultsTitle" class="results-title">RESULTADOS DE <span class="accent">BÚSQUEDA</span></h2>
+        </div>
+
+        <!-- Cambiar los filtros -->
+        <div class="search-filters" id="categoryFilters">
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="Acción">Acción</button>
+            <button class="filter-btn" data-category="Aventura">Aventura</button>
+            <button class="filter-btn" data-category="RPG">RPG</button>
+            <button class="filter-btn" data-category="Deportes">Deportes</button>
+            <button class="filter-btn" data-category="Lucha">Lucha</button>
+            <button class="filter-btn" data-category="Exclusivos">Exclusivos</button>
+        </div>
+        <div id="searchResults" class="results-grid">
+            <p class="no-results">Ingresa un término de búsqueda para ver resultados.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                    <span class="logo-text">GAME<span class="accent">ZONE</span></span>
+                </div>
+                <p>Tu tienda especializada en videojuegos y accesorios para PlayStation 5. Ofrecemos los mejores
+                    títulos, al mejor precio y con la mejor atención.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Exclusivos PS5</a></li>
+                    <li><a href="#">Pre-órdenes</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ayuda & Soporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Envíos y Entregas</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima</li>
+                    <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@gamezone.pe</li>
+                    <li><i class="fas fa-clock"></i> Lun-Vie: 9am-7pm | Sáb: 10am-5pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="payment-methods">
+                <h3>Métodos de Pago</h3>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <img src="/img/noticias/ICONOS-yape-para-pagina-png.webp" alt="Yape">
+                    <img src="img/noticias/images.jpeg" alt="Plin">
+                </div>
+            </div>
+            <div class="security-badges">
+                <h3>Compra Segura</h3>
+                <div class="security-icons">
+                    <img src="img/payment/ssl.jpg" alt="SSL">
+                    <img src="img/payment/9721115.png" alt="Pago Seguro">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+            <div class="language-selector">
+                <select>
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/busqueda/search.js"></script>
+<script src="/busqueda/resultados.js"></script>
+<script src="/script/main.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+/* Estilos para la página de Ofertas Especiales */
+
+.offers-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 80px; /* Espacio para el header fijo */
+}
+
+/* Hero section */
+.offers-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/img/juegos/1692382805-red-dead-redemption-ps5-0.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.offers-hero h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff2a6d;
+  text-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+}
+
+.offers-hero p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d7e0;
+}
+
+/* Countdown */
+.countdown-container {
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 42, 109, 0.3);
+}
+
+.countdown-container p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #ff2a6d;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-item span:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d1d7e0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  min-width: 70px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Orbitron", sans-serif;
+}
+
+.countdown-item span:last-child {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #05d9e8;
+}
+
+/* Categorías de ofertas */
+.offers-categories {
+  margin-bottom: 2rem;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.category-tab {
+  background: #1a1a2e;
+  color: #d1d7e0;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.category-tab.active {
+  background: #ff2a6d;
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 42, 109, 0.3);
+}
+
+.category-tab:hover:not(.active) {
+  background: #16213e;
+  color: #ff2a6d;
+}
+
+/* Grid de ofertas */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.offer-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff2a6d;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 5px 10px rgba(255, 42, 109, 0.3);
+}
+
+.offer-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.offer-card:hover .offer-image img {
+  transform: scale(1.05);
+}
+
+/* Añadir un overlay al pasar el cursor para mejorar la visibilidad */
+.offer-card:hover .offer-image::before {
+  opacity: 1;
+}
+
+/* Añadir efecto de hover para los botones */
+.offer-card:hover .offer-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Overlay para mejorar la visibilidad de los botones */
+.offer-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to top, rgba(22, 33, 62, 0.8), transparent);
+  z-index: 1;
+}
+
+.offer-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(26, 26, 46, 0.8) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.offer-card:hover .offer-image::before {
+  opacity: 1;
+}
+
+.offer-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-card h4 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ff2a6d;
+}
+
+.offer-genre {
+  color: #05d9e8;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.offer-price {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.current-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #d1d7e0;
+}
+
+.offer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.view-details {
+  color: #05d9e8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.view-details:hover {
+  color: #ff2a6d;
+}
+
+.add-to-cart {
+  background: linear-gradient(90deg, #ff2a6d, #d61c4e);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 42, 109, 0.3);
+}
+
+.add-to-cart:hover {
+  background: linear-gradient(90deg, #d61c4e, #ff2a6d);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 42, 109, 0.4);
+}
+
+/* Botón cargar más */
+.load-more {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.load-more-btn {
+  background: linear-gradient(90deg, #ff2a6d, #d61c4e);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 42, 109, 0.3);
+}
+
+.load-more-btn:hover {
+  background: linear-gradient(90deg, #d61c4e, #ff2a6d);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 42, 109, 0.4);
+}
+
+/* Banner promocional */
+.promo-banner {
+  background: linear-gradient(135deg, #ff2a6d 0%, #d61c4e 100%);
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(255, 42, 109, 0.3);
+}
+
+.promo-banner h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.promo-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: white;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.promo-btn {
+  display: inline-block;
+  background: white;
+  color: #ff2a6d;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.promo-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .offers-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .offers-hero h3 {
+    font-size: 2rem;
+  }
+
+  .countdown-item span:first-child {
+    font-size: 1.5rem;
+    min-width: 60px;
+  }
+
+  .offers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .offers-container {
+    padding: 1rem;
+  }
+
+  .countdown {
+    gap: 1rem;
+  }
+
+  .countdown-item span:first-child {
+    font-size: 1.2rem;
+    min-width: 50px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .countdown-item span:last-child {
+    font-size: 0.8rem;
+  }
+
+  .offers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .promo-banner h3 {
+    font-size: 2rem;
+  }
+
+  .promo-banner p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-tabs {
+    justify-content: center;
+  }
+
+  .promo-banner h3 {
+    font-size: 1.8rem;
+  }
+
+  .promo-banner p {
+    font-size: 1rem;
+  }
+}

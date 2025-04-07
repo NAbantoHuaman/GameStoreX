@@ -1,0 +1,340 @@
+/* featured.css - Estilos para la sección de juegos destacados con tema Cyberpunk */
+
+.featured-games {
+    position: relative;
+    background-color: var(--color-bg-dark);
+    overflow: hidden;
+}
+
+.featured-games::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 243, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Filtros rápidos */
+.quick-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.filter-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: rgba(16, 16, 28, 0.6);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    border-radius: var(--border-radius-sm);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);
+}
+
+.filter-btn.active {
+    background-color: rgba(0, 243, 255, 0.1);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+/* Grid de juegos */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    position: relative;
+    z-index: 2;
+}
+
+/* Tarjeta de juego */
+.game-card {
+    position: relative;
+    background-color: var(--color-bg-card);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition-normal);
+    transform: translateY(0);
+}
+
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-card);
+    opacity: 0;
+    transition: var(--transition-normal);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+.game-card:hover::before {
+    opacity: 1;
+}
+
+/* Encabezado de la tarjeta */
+.game-card-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm);
+    z-index: 3;
+}
+
+.game-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-secondary);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 0 10px rgba(255, 0, 102, 0.3);
+}
+
+.wishlist-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(5, 5, 8, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.wishlist-btn:hover {
+    background-color: rgba(255, 0, 102, 0.1);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(255, 0, 102, 0.3);
+}
+
+.wishlist-btn.active {
+    background-color: rgba(255, 0, 102, 0.1);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* Contenedor de imagen */
+.game-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 133%; /* Proporción 3:4 */
+    overflow: hidden;
+}
+
+.game-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    z-index: 2;
+}
+
+.game-card:hover .game-image {
+    transform: scale(1.05);
+}
+
+/* Overlay de la imagen */
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(5, 5, 8, 0.9) 0%, rgba(5, 5, 8, 0.5) 40%, rgba(5, 5, 8, 0.2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-normal);
+    z-index: 3;
+}
+
+.game-card:hover .game-overlay {
+    opacity: 1;
+}
+
+.btn-details {
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: rgba(0, 243, 255, 0.1);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-primary);
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-normal);
+}
+
+.btn-details:hover {
+    background-color: var(--color-primary);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+/* Información del juego */
+.game-info {
+    padding: var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.game-info h3 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: #fff;
+    transition: var(--transition-normal);
+}
+
+.game-card:hover .game-info h3 {
+    color: var(--color-primary);
+}
+
+.game-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.game-category {
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.game-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.game-rating i {
+    color: var(--color-tertiary);
+    font-size: var(--font-size-xs);
+}
+
+.game-rating span {
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-tertiary);
+}
+
+/* Precio y acciones */
+.game-price-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-price {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: #fff;
+}
+
+.btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 243, 255, 0.1);
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.btn-cart:hover {
+    background-color: var(--color-primary);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .quick-filters {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: var(--spacing-xs);
+        margin-top: var(--spacing-xs);
+    }
+    
+    .filter-btn {
+        flex-shrink: 0;
+    }
+}

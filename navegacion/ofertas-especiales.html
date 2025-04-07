@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Especiales - GameStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/indexPrincipal/css/main.css">
+    <link rel="stylesheet" href="/indexPrincipal/css/user-welcome.css">
+    <link rel="stylesheet" href="/busqueda/search-dropdown.css">
+    <link rel="stylesheet" href="/navegacion/ofertas-especiales.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/new_index.html">
+                    <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                    <span class="logo-text">GAME<span class="accent">STORE</span></span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="/new_index.html">Inicio</a></li>
+                    <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                    <li><a href="/nosotros/nosotros.html">Nosotros</a></li>
+                    <li><a href="/navegacion/blog.html">Blog</a></li>
+                    <li><a href="/soporte/soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Buscar en el header -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar juegos...">
+                    <button id="searchButton" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="/carrito/carrito.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="/Isesion/index.html" class="user-icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-title">
+        <h2 class="logo">🔥 Ofertas Especiales</h2>
+    </div>
+
+    <main class="offers-container">
+        <section class="offers-hero">
+            <div class="hero-content">
+                <h3>Descuentos Imperdibles</h3>
+                <p>Aprovecha nuestras ofertas por tiempo limitado en los mejores juegos para PS5. ¡No esperes más para
+                    ampliar tu colección con estos precios increíbles!</p>
+                <div class="countdown-container">
+                    <p>Las ofertas terminan en:</p>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span id="days">02</span>
+                            <span>Días</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">18</span>
+                            <span>Horas</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">45</span>
+                            <span>Minutos</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">30</span>
+                            <span>Segundos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="offers-categories">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">Todas las ofertas</button>
+                <button class="category-tab" data-category="week">Ofertas de la semana</button>
+                <button class="category-tab" data-category="clearance">Liquidación</button>
+                <button class="category-tab" data-category="bundle">Paquetes</button>
+            </div>
+        </section>
+
+        <div class="offers-grid">
+            <!-- Oferta 1 -->
+            <div class="offer-card" data-category="week">
+                <div class="discount-badge">-40%</div>
+                <div class="offer-image">
+                    <img src="/img/juegos/1692382805-red-dead-redemption-ps5-0.jpg" alt="Red Dead Redemption">
+                </div>
+                <div class="offer-info">
+                    <h4>Red Dead Redemption</h4>
+                    <p class="offer-genre">Acción, Aventura</p>
+                    <div class="offer-price">
+                        <span class="original-price">S/ 249.90</span>
+                        <span class="current-price">S/ 149.90</span>
+                    </div>
+                    <div class="offer-actions">
+                        <a href="#" class="view-details">Ver detalles</a>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta 2 -->
+            <div class="offer-card" data-category="week clearance">
+                <div class="discount-badge">-30%</div>
+                <div class="offer-image">
+                    <img src="/img/juegos/1659398336-resident-evil-2-deluxe-edition-ps5-0.jpg"
+                        alt="Resident Evil 2 Deluxe Edition">
+                </div>
+                <div class="offer-info">
+                    <h4>Resident Evil 2 Deluxe Edition</h4>
+                    <p class="offer-genre">Terror, Acción</p>
+                    <div class="offer-price">
+                        <span class="original-price">S/ 199.90</span>
+                        <span class="current-price">S/ 139.90</span>
+                    </div>
+                    <div class="offer-actions">
+                        <a href="#" class="view-details">Ver detalles</a>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta 3 -->
+            <div class="offer-card" data-category="bundle">
+                <div class="discount-badge">-25%</div>
+                <div class="offer-image">
+                    <img src="/img/juegos2/1646845135-bloodborne-game-of-the-year-edition-ps5.jpg"
+                        alt="Bloodborne GOTY Edition">
+                </div>
+                <div class="offer-info">
+                    <h4>Bloodborne GOTY Edition</h4>
+                    <p class="offer-genre">RPG, Acción</p>
+                    <div class="offer-price">
+                        <span class="original-price">S/ 179.90</span>
+                        <span class="current-price">S/ 134.90</span>
+                    </div>
+                    <div class="offer-actions">
+                        <a href="#" class="view-details">Ver detalles</a>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta 4 -->
+            <div class="offer-card" data-category="week">
+                <div class="discount-badge">-50%</div>
+                <div class="offer-image">
+                    <img src="/img/juegos2/1646843815-assassins-creed-origins-deluxe-edition-ps5.jpg"
+                        alt="Assassin's Creed Origins Deluxe Edition">
+                </div>
+                <div class="offer-info">
+                    <h4>Assassin's Creed Origins Deluxe Edition</h4>
+                    <p class="offer-genre">Acción, Aventura</p>
+                    <div class="offer-price">
+                        <span class="original-price">S/ 219.90</span>
+                        <span class="current-price">S/ 109.90</span>
+                    </div>
+                    <div class="offer-actions">
+                        <a href="#" class="view-details">Ver detalles</a>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta 5 -->
+            <div class="offer-card" data-category="clearance">
+                <div class="discount-badge">-35%</div>
+                <div class="offer-image">
+                    <img src="/img/juegos2/1679425138-back-4-blood-ultimate-edition-ps5-0.jpg"
+                        alt="Back 4 Blood Ultimate Edition">
+                </div>
+                <div class="offer-info">
+                    <h4>Back 4 Blood Ultimate Edition</h4>
+                    <p class="offer-genre">Acción, Shooter</p>
+                    <div class="offer-price">
+                        <span class="original-price">S/ 229.90</span>
+                        <span class="current-price">S/ 149.90</span>
+                    </div>
+                    <div class="offer-actions">
+                        <a href="#" class="view-details">Ver detalles</a>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta 6 -->
+            <div class="offer-card" data-category="bundle">
+                <div class="discount-badge">-45%</div>
+                <div class="offer-image">
+                    <img src="/img/juegos2/1692833779-assassins-creed-valhalla-deluxe-ps5-0.jpg"
+                        alt="Assassin's Creed Valhalla Deluxe">
+                </div>
+                <div class="offer-info">
+                    <h4>Assassin's Creed Valhalla Deluxe</h4>
+                    <p class="offer-genre">RPG, Acción</p>
+                    <div class="offer-price">
+                        <span class="original-price">S/ 239.90</span>
+                        <span class="current-price">S/ 131.90</span>
+                    </div>
+                    <div class="offer-actions">
+                        <a href="#" class="view-details">Ver detalles</a>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta 7 -->
+            <div class="offer-card" data-category="week">
+                <div class="discount-badge">-20%</div>
+                <div class="offer-image">
+                    <img src="/img/juegos2/1698340923-fifa-23-ps5-0.jpg" alt="FIFA 23">
+                </div>
+                <div class="offer-info">
+                    <h4>FIFA 23</h4>
+                    <p class="offer-genre">Deportes</p>
+                    <div class="offer-price">
+                        <span class="original-price">S/ 199.90</span>
+                        <span class="current-price">S/ 159.90</span>
+                    </div>
+                    <div class="offer-actions">
+                        <a href="#" class="view-details">Ver detalles</a>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oferta 8 -->
+            <div class="offer-card" data-category="clearance">
+                <div class="discount-badge">-60%</div>
+                <div class="offer-image">
+                    <img src="/img/juegos2/1646773235-descenders-ps5.jpg" alt="Descenders">
+                </div>
+                <div class="offer-info">
+                    <h4>Descenders</h4>
+                    <p class="offer-genre">Deportes, Acción</p>
+                    <div class="offer-price">
+                        <span class="original-price">S/ 149.90</span>
+                        <span class="current-price">S/ 59.90</span>
+                    </div>
+                    <div class="offer-actions">
+                        <a href="#" class="view-details">Ver detalles</a>
+                        <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn">Ver más ofertas</button>
+        </div>
+
+        <section class="promo-banner">
+            <div class="promo-content">
+                <h3>¡OFERTA FLASH!</h3>
+                <p>Compra 2 juegos de nuestra selección de ofertas y llévate el tercero GRATIS</p>
+                <a href="#" class="promo-btn">Ver promoción</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                        <span class="logo-text">GAME<span class="accent">ZONE</span></span>
+                    </div>
+                    <p>Tu tienda especializada en videojuegos y accesorios para PlayStation 5. Ofrecemos los mejores
+                        títulos, al mejor precio y con la mejor atención.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="/new_index.html">Inicio</a></li>
+                        <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                        <li><a href="/navegacion/ofertas-especiales.html">Ofertas</a></li>
+                        <li><a href="/navegacion/exclusivos-ps5.html">Exclusivos PS5</a></li>
+                        <li><a href="/navegacion/proximos-lanzamientos.html">Pre-órdenes</a></li>
+                        <li><a href="/navegacion/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ayuda & Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="/soporte/soporte.html">Contacto</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Envíos y Entregas</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima</li>
+                        <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@gamezone.pe</li>
+                        <li><i class="fas fa-clock"></i> Lun-Vie: 9am-7pm | Sáb: 10am-5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="payment-methods">
+                    <h3>Métodos de Pago</h3>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <img src="/img/noticias/ICONOS-yape-para-pagina-png.webp" alt="Yape">
+                        <img src="/img/noticias/images.jpeg" alt="Plin">
+                    </div>
+                </div>
+                <div class="security-badges">
+                    <h3>Compra Segura</h3>
+                    <div class="security-icons">
+                        <img src="/img/payment/ssl.jpg" alt="SSL">
+                        <img src="/img/payment/9721115.png" alt="Pago Seguro">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+                <div class="language-selector">
+                    <select>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/busqueda/search.js" defer></script>
+    <script src="/busqueda/resultados.js" defer></script>
+    <script src="/script/main.js" defer></script>
+    <script src="/navegacion/ofertas-especiales.js" defer></script>
+</body>
+
+</html>

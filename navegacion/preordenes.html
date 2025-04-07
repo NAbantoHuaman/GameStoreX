@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-órdenes - GameStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/indexPrincipal/css/main.css">
+    <link rel="stylesheet" href="/indexPrincipal/css/user-welcome.css">
+    <link rel="stylesheet" href="/busqueda/search-dropdown.css">
+    <link rel="stylesheet" href="/navegacion/proximos-lanzamientos.css">
+    <link rel="stylesheet" href="/navegacion/preordenes.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/new_index.html">
+                    <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                    <span class="logo-text">GAME<span class="accent">STORE</span></span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="/new_index.html">Inicio</a></li>
+                    <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                    <li><a href="/nosotros/nosotros.html">Nosotros</a></li>
+                    <li><a href="/navegacion/blog.html">Blog</a></li>
+                    <li><a href="/soporte/soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Buscar en el header -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar juegos...">
+                    <button id="searchButton" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="/carrito/carrito.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="/Isesion/index.html" class="user-icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-title">
+        <h2 class="logo">🎮 Pre-órdenes Disponibles</h2>
+    </div>
+
+    <main class="upcoming-container">
+        <section class="upcoming-hero">
+            <div class="hero-content">
+                <h3>Reserva con Anticipación</h3>
+                <p>Asegura tu copia de los juegos más esperados antes de su lanzamiento. Realiza tu pre-orden y recibe
+                    beneficios exclusivos como contenido adicional, acceso anticipado y artículos coleccionables.</p>
+                <div class="preorder-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-tag"></i>
+                        <span>Garantía de precio más bajo</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-gift"></i>
+                        <span>Contenido exclusivo</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Acceso anticipado</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-featured">
+            <div class="featured-game">
+                <div class="featured-image">
+                    <img src="/img/juegos/1737754002-doom-the-dark-ages-ps5-pre-orden-0.webp" alt="DOOM: The Dark Ages">
+                    <div class="preorder-badge">Pre-orden Destacada</div>
+                </div>
+                <div class="featured-info">
+                    <div class="release-date">Lanzamiento: 15 de enero, 2024</div>
+                    <h3>DOOM: The Dark Ages</h3>
+                    <p>Enfréntate a las hordas del infierno en la nueva entrega de DOOM. Viaja a través del tiempo hasta la Edad Media para enfrentar a demonios ancestrales con un arsenal de armas brutales y devastadoras.</p>
+                    <div class="game-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Género:</span>
+                            <span class="detail-value">Acción, FPS</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Desarrollador:</span>
+                            <span class="detail-value">id Software</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Precio pre-orden:</span>
+                            <span class="detail-value">S/ 259.90</span>
+                        </div>
+                    </div>
+                    <div class="preorder-bonus">
+                        <h4>Bonus de pre-orden:</h4>
+                        <ul>
+                            <li>Skin exclusiva "Slayer Medieval"</li>
+                            <li>Arma legendaria "Espada Infernal"</li>
+                            <li>20% de descuento en pre-orden</li>
+                        </ul>
+                    </div>
+                    <div class="featured-actions">
+                        <button class="preorder-btn" data-id="doom-the-dark-ages" data-name="DOOM: The Dark Ages" data-price="S/ 259.90" data-image="/img/juegos/1737754002-doom-the-dark-ages-ps5-pre-orden-0.webp">Pre-ordenar ahora</button>
+                        <a href="/producto.html?id=doom-the-dark-ages" class="details-btn">Más detalles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-filters">
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="action">Acción</button>
+                <button class="filter-btn" data-filter="adventure">Aventura</button>
+                <button class="filter-btn" data-filter="rpg">RPG</button>
+                <button class="filter-btn" data-filter="sports">Deportes</button>
+            </div>
+            <div class="sort-options">
+                <label for="sort-select">Ordenar por:</label>
+                <select id="sort-select">
+                    <option value="date-asc">Fecha: Más cercana</option>
+                    <option value="date-desc">Fecha: Más lejana</option>
+                    <option value="price-low">Precio: Menor a Mayor</option>
+                    <option value="price-high">Precio: Mayor a Menor</option>
+                    <option value="name-asc">Nombre: A-Z</option>
+                </select>
+            </div>
+        </section>
+
+        <div class="upcoming-grid">
+            <!-- Juego 1 -->
+            <div class="upcoming-card" data-category="rpg action">
+                <div class="upcoming-image">
+                    <img src="/img/juegos/1727472891-dragon-age-dreadwolf-ps5-pre-orden-0.webp" alt="Dragon Age: Dreadwolf">
+                    <div class="release-badge">Noviembre 2023</div>
+                </div>
+                <div class="upcoming-info">
+                    <h4>Dragon Age: Dreadwolf</h4>
+                    <p class="upcoming-genre">RPG, Acción</p>
+                    <div class="upcoming-price">
+                        <span class="preorder-price">S/ 269.90</span>
+                    </div>
+                    <div class="upcoming-actions">
+                        <a href="/producto.html?id=dragon-age-dreadwolf" class="view-details">Ver detalles</a>
+                        <button class="preorder-now" data-id="dragon-age-dreadwolf" data-name="Dragon Age: Dreadwolf" data-price="S/ 269.90" data-image="/img/juegos/1727472891-dragon-age-dreadwolf-ps5-pre-orden-0.webp">Pre-ordenar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juego 2 -->
+            <div class="upcoming-card" data-category="action adventure">
+                <div class="upcoming-image">
+                    <img src="/img/juegos/1727997956-horizon-zero-dawn-remastered-ps5-pre-orden-0.webp" alt="Horizon Zero Dawn Remastered">
+                    <div class="release-badge">Diciembre 2023</div>
+                </div>
+                <div class="upcoming-info">
+                    <h4>Horizon Zero Dawn Remastered</h4>
+                    <p class="upcoming-genre">Acción, Aventura</p>
+                    <div class="upcoming-price">
+                        <span class="preorder-price">S/ 249.90</span>
+                    </div>
+                    <div class="upcoming-actions">
+                        <a href="/producto.html?id=horizon-zero-dawn-remastered" class="view-details">Ver detalles</a>
+                        <button class="preorder-now" data-id="horizon-zero-dawn-remastered" data-name="Horizon Zero Dawn Remastered" data-price="S/ 249.90" data-image="/img/juegos/1727997956-horizon-zero-dawn-remastered-ps5-pre-orden-0.webp">Pre-ordenar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juego 3 -->
+            <div class="upcoming-card" data-category="action">
+                <div class="upcoming-image">
+                    <img src="/img/juegos/1715874649-assassins-creed-shadows-ps5-pre-orden-0.webp" alt="Assassin's Creed Shadows">
+                    <div class="release-badge">Noviembre 2023</div>
+                </div>
+                <div class="upcoming-info">
+                    <h4>Assassin's Creed Shadows</h4>
+                    <p class="upcoming-genre">Acción, Aventura</p>
+                    <div class="upcoming-price">
+                        <span class="preorder-price">S/ 289.90</span>
+                    </div>
+                    <div class="upcoming-actions">
+                        <a href="/producto.html?id=assassins-creed-shadows" class="view-details">Ver detalles</a>
+                        <button class="preorder-now" data-id="assassins-creed-shadows" data-name="Assassin's Creed Shadows" data-price="S/ 289.90" data-image="/img/juegos/1715874649-assassins-creed-shadows-ps5-pre-orden-0.webp">Pre-ordenar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juego 4 -->
+            <div class="upcoming-card" data-category="sports">
+                <div class="upcoming-image">
+                    <img src="/img/juegos/1738168989-wwe-2k25-ps5-pre-orden-0.webp" alt="WWE 2K25">
+                    <div class="release-badge">Febrero 2024</div>
+                </div>
+                <div class="upcoming-info">
+                    <h4>WWE 2K25</h4>
+                    <p class="upcoming-genre">Deportes, Lucha</p>
+                    <div class="upcoming-price">
+                        <span class="preorder-price">S/ 239.90</span>
+                    </div>
+                    <div class="upcoming-actions">
+                        <a href="/producto.html?id=wwe-2k25" class="view-details">Ver detalles</a>
+                        <button class="preorder-now" data-id="wwe-2k25" data-name="WWE 2K25" data-price="S/ 239.90" data-image="/img/juegos/1738168989-wwe-2k25-ps5-pre-orden-0.webp">Pre-ordenar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juego 5 -->
+            <div class="upcoming-card" data-category="rpg action">
+                <div class="upcoming-image">
+                    <img src="/img/juegos/1718238829-monster-hunter-wilds-ps5-pre-orden-0.jpg" alt="Monster Hunter Wilds">
+                    <div class="release-badge">Marzo 2024</div>
+                </div>
+                <div class="upcoming-info">
+                    <h4>Monster Hunter Wilds</h4>
+                    <p class="upcoming-genre">RPG, Acción</p>
+                    <div class="upcoming-price">
+                        <span class="preorder-price">S/ 279.90</span>
+                    </div>
+                    <div class="upcoming-actions">
+                        <a href="/producto.html?id=monster-hunter-wilds" class="view-details">Ver detalles</a>
+                        <button class="preorder-now" data-id="monster-hunter-wilds" data-name="Monster Hunter Wilds" data-price="S/ 279.90" data-image="/img/juegos/1718238829-monster-hunter-wilds-ps5-pre-orden-0.jpg">Pre-ordenar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Juego 6 -->
+            <div class="upcoming-card" data-category="action">
+                <div class="upcoming-image">
+                    <img src="/img/juegos/1718149460-black-myth-wukong-ps5-pre-orden-0.jpg" alt="Black Myth: Wukong">
+                    <div class="release-badge">Abril 2024</div>
+                </div>
+                <div class="upcoming-info">
+                    <h4>Black Myth: Wukong</h4>
+                    <p class="upcoming-genre">Acción, Aventura</p>
+                    <div class="upcoming-price">
+                        <span class="preorder-price">S/ 259.90</span>
+                    </div>
+                    <div class="upcoming-actions">
+                        <a href="/producto.html?id=black-myth-wukong" class="view-details">Ver detalles</a>
+                        <button class="preorder-now" data-id="black-myth-wukong" data-name="Black Myth: Wukong" data-price="S/ 259.90" data-image="/img/juegos/1718149460-black-myth-wukong-ps5-pre-orden-0.jpg">Pre-ordenar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn">Ver más pre-órdenes</button>
+        </div>
+
+        <section class="preorder-info">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <h4>Garantía de precio más bajo</h4>
+                <p>Si el precio baja antes del lanzamiento, te reembolsaremos la diferencia automáticamente.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h4>Entrega el día de lanzamiento</h4>
+                <p>Recibe tu juego el mismo día de su lanzamiento oficial sin costo adicional.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h4>Contenido exclusivo</h4>
+                <p>Todas nuestras pre-órdenes incluyen contenido digital o físico exclusivo.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                        <span class="logo-text">GAME<span class="accent">ZONE</span></span>
+                    </div>
+                    <p>Tu tienda especializada en videojuegos y accesorios para PlayStation 5. Ofrecemos los mejores
+                        títulos, al mejor precio y con la mejor atención.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="/new_index.html">Inicio</a></li>
+                        <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                        <li><a href="/navegacion/ofertas-especiales.html">Ofertas</a></li>
+                        <li><a href="/navegacion/exclusivos-ps5.html">Exclusivos PS5</a></li>
+                        <li><a href="/navegacion/preordenes.html">Pre-órdenes</a></li>
+                        <li><a href="/navegacion/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ayuda & Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="/soporte/soporte.html">Contacto</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Envíos y Entregas</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima</li>
+                        <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@gamezone.pe</li>
+                        <li><i class="fas fa-clock"></i> Lun-Vie: 9am-7pm | Sáb: 10am-5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="payment-methods">
+                    <h3>Métodos de Pago</h3>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <img src="/img/noticias/ICONOS-yape-para-pagina-png.webp" alt="Yape">
+                        <img src="/img/noticias/images.jpeg" alt="Plin">
+                    </div>
+                </div>
+                <div class="security-badges">
+                    <h3>Compra Segura</h3>
+                    <div class="security-icons">
+                        <img src="/img/payment/ssl.jpg" alt="SSL">
+                        <img src="/img/payment/9721115.png" alt="Pago Seguro">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+                <div class="language-selector">
+                    <select>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/busqueda/search.js" defer></script>
+    <script src="/busqueda/resultados.js" defer></script>
+    <script src="/script/main.js" defer></script>
+    <script src="/navegacion/preordenes.js" defer></script>
+    <script src="/navegacion/preordenes-manager.js"></script>
+</body>
+
+</html>

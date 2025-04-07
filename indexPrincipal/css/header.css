@@ -1,0 +1,363 @@
+/* header.css - Estilos para el encabezado con tema Cyberpunk */
+:root {
+    /* Variables de color (ejemplo) */
+    --color-primary: #00f3ff;
+    --color-accent: #ff4655;
+    --color-bg-dark: #050508;
+    --border-neon: 1px solid rgba(0, 243, 255, 0.3);
+    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    --neon-shadow-primary: 0 0 10px rgba(0, 243, 255, 0.7);
+    --transition-normal: all 0.3s ease;
+    --z-index-sticky: 1000;
+    
+    /* Espaciados */
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    
+    /* Fuentes */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-secondary: 'Rajdhani', sans-serif;
+    --font-tertiary: 'Oxanium', sans-serif;
+}
+
+/* Animaciones */
+@keyframes neonPulse {
+    0%, 100% { opacity: 1; text-shadow: 0 0 10px var(--color-primary); }
+    50% { opacity: 0.7; text-shadow: 0 0 5px var(--color-primary); }
+}
+
+@keyframes neonPulseAccent {
+    0%, 100% { opacity: 1; text-shadow: 0 0 10px var(--color-accent); }
+    50% { opacity: 0.7; text-shadow: 0 0 5px var(--color-accent); }
+}
+
+/* Header principal */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--z-index-sticky);
+    background-color: rgba(5, 5, 8, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: var(--border-neon);
+    box-shadow: 0 5px 15px rgba(0, 243, 255, 0.1);
+    transition: var(--transition-normal);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-primary);
+    opacity: 0.7;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+}
+
+/* Logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.logo-icon {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    animation: neonPulse 2s infinite;
+}
+
+.logo-text {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo-text .accent {
+    color: var(--color-accent);
+    animation: neonPulseAccent 2s infinite;
+}
+
+/* Navegación */
+.main-nav {
+    position: relative;
+}
+
+.nav-list {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.nav-list a {
+    position: relative;
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: var(--spacing-xs) 0;
+    transition: var(--transition-normal);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: var(--transition-normal);
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--color-primary);
+    text-shadow: var(--neon-shadow-primary);
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+    width: 100%;
+}
+
+/* Menú hamburguesa (oculto por defecto) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    transition: var(--transition-normal);
+}
+
+/* Acciones del header */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    position: relative;
+    width: 250px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: rgba(16, 16, 28, 0.6);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    border-radius: var(--border-radius-sm);
+    color: #fff;
+    font-size: var(--font-size-sm);
+    transition: var(--transition-normal);
+}
+
+.search-bar input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-btn {
+    position: absolute;
+    right: var(--spacing-xs);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.search-btn:hover {
+    color: var(--color-accent);
+}
+
+/* Iconos de usuario/carrito */
+.cart-icon,
+.user-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(16, 16, 28, 0.6);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    color: var(--color-primary);
+    font-size: var(--font-size-md);
+    transition: var(--transition-normal);
+}
+
+.cart-icon:hover,
+.user-icon:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 0, 102, 0.5);
+}
+
+/* ================= RESPONSIVE ================= */
+/* 1200px - Pantallas medianas/grandes */
+@media (max-width: 1200px) {
+    .header .container {
+        padding-top: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .logo-icon {
+        font-size: var(--font-size-lg);
+    }
+    
+    .logo-text {
+        font-size: var(--font-size-md);
+    }
+
+    .nav-list {
+        gap: var(--spacing-md);
+    }
+    
+    .nav-list a {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xxs) 0;
+    }
+
+    .search-bar {
+        width: 180px;
+    }
+    
+    .search-bar input {
+        padding: var(--spacing-xxs) var(--spacing-sm);
+    }
+
+    .cart-icon, 
+    .user-icon {
+        width: 36px;
+        height: 36px;
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* 992px - Tablets landscape */
+@media (max-width: 992px) {
+    .search-bar {
+        width: 200px;
+    }
+}
+
+/* 768px - Tablets portrait */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: 80px var(--spacing-lg) var(--spacing-lg);
+        background-color: rgba(5, 5, 8, 0.95);
+        backdrop-filter: blur(10px);
+        border-left: var(--border-neon);
+        box-shadow: -5px 0 15px rgba(0, 243, 255, 0.1);
+        transition: var(--transition-normal);
+        z-index: 5;
+    }
+    
+    .nav-list.active {
+        right: 0;
+    }
+    
+    .search-bar {
+        display: none;
+    }
+    
+    .header-actions {
+        gap: var(--spacing-sm);
+    }
+}
+
+/* 480px - Móviles */
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: var(--font-size-md);
+    }
+    
+    .cart-icon,
+    .user-icon {
+        width: 36px;
+        height: 36px;
+        font-size: var(--font-size-sm);
+    }
+    
+    .header .container {
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+}

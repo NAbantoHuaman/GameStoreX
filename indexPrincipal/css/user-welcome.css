@@ -1,0 +1,115 @@
+/* Estilos para el icono de usuario cuando está logueado */
+.user-icon.logged-in {
+    position: relative;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(255, 0, 102, 0.5);
+    overflow: visible;
+}
+
+.user-icon.logged-in i {
+    color: var(--color-accent);
+    animation: neonPulseAccent 2s infinite;
+    font-size: 16px;
+}
+
+/* Definición de la animación neonPulseAccent faltante */
+@keyframes neonPulseAccent {
+    0%, 100% {
+        text-shadow: 
+            0 0 5px var(--color-accent),
+            0 0 10px transparent;
+        opacity: 0.8;
+    }
+    50% {
+        text-shadow: 
+            0 0 15px var(--color-accent),
+            0 0 30px var(--color-accent);
+        opacity: 1;
+    }
+}
+
+/* Tooltip de bienvenida */
+.user-tooltip {
+    position: absolute;
+    top: 40px;
+    right: -15px;
+    background: var(--gradient-primary);
+    color: #fff;
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--neon-shadow-primary);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: var(--transition-normal);
+    z-index: 99999;
+    pointer-events: none;
+    width: auto !important;
+    min-width: max-content !important;
+    display: block;
+    text-overflow: clip;
+    max-width: none;
+}
+
+/* Flecha del tooltip */
+.user-tooltip::after {
+    content: '';
+    position: absolute;
+    top: -5px; 
+    right: 15px; 
+    width: 10px;
+    height: 10px;
+    background: var(--color-accent);
+    transform: rotate(45deg);
+    box-shadow: var(--neon-shadow-accent);
+}
+
+/* Mostrar tooltip al hacer hover */
+.user-icon.logged-in:hover .user-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto glitch simplificado para el nombre de usuario */
+@keyframes simpleGlitch {
+    0%, 100% { transform: translateX(0); }
+    10% { transform: translateX(-2px); }
+    20% { transform: translateX(2px); }
+    30% { transform: translateX(-1px); }
+    40% { transform: translateX(1px); }
+    50% { transform: translateX(-1px); }
+    60% { transform: translateX(1px); }
+    70% { transform: translateX(0); }
+}
+
+/* Aplicar el efecto glitch al tooltip */
+.user-tooltip {
+    animation: simpleGlitch 5s infinite;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .user-tooltip {
+        top: 35px;
+        right: -10px;
+        font-size: var(--font-size-xs);
+    }
+    
+    .user-icon.logged-in i {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-tooltip {
+        right: -5px;
+        top: 30px;
+    }
+    
+    .user-icon.logged-in i {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,307 @@
+/* exclusives.css - Estilos para la sección de juegos exclusivos con tema Cyberpunk */
+
+.exclusives {
+    position: relative;
+    background-color: var(--color-bg-dark);
+    padding: var(--spacing-xl) 0;
+    overflow: hidden;
+}
+
+.exclusives::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 0, 102, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Encabezado de sección */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.section-header .accent {
+    color: var(--color-accent);
+}
+
+.view-all {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-family: var(--font-tertiary);
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: var(--transition-normal);
+}
+
+.view-all:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 0, 102, 0.7);
+}
+
+/* Contenedor principal */
+.exclusives-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+/* Juego destacado */
+.exclusives-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    background-color: var(--color-bg-darker);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255, 0, 102, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 0, 102, 0.2);
+}
+
+.featured-game-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 6s ease;
+}
+
+.exclusives-featured:hover .featured-game-image img {
+    transform: scale(1.05);
+}
+
+.featured-game-info {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-game-info h3 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: var(--spacing-md);
+}
+
+.featured-game-info p {
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-md);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.featured-game-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.meta-item i {
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+}
+
+.meta-item span {
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.featured-game-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+/* Grid de juegos exclusivos */
+.exclusives-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+
+.exclusive-card {
+    position: relative;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(255, 0, 102, 0.3);
+    transition: var(--transition-normal);
+    aspect-ratio: 3/4;
+}
+
+.exclusive-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 20px rgba(255, 0, 102, 0.3);
+}
+
+.exclusive-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exclusive-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-md);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.exclusive-card:hover .exclusive-card-overlay {
+    opacity: 1;
+}
+
+.exclusive-card-overlay h4 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.btn-small {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-normal);
+}
+
+.btn-small:hover {
+    background-color: #fff;
+    color: var(--color-bg-dark);
+    box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-family: var(--font-tertiary);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-normal);
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: #fff;
+    border: 1px solid var(--color-accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: var(--color-bg-dark);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .exclusives-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .exclusives-featured {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-game-image {
+        height: 300px;
+    }
+    
+    .exclusives-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-game-meta {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-game-actions {
+        flex-direction: column;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 576px) {
+    .exclusives-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-game-info {
+        padding: var(--spacing-md);
+    }
+    
+    .featured-game-info h3 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .featured-game-info p {
+        font-size: var(--font-size-sm);
+    }
+}

@@ -1,0 +1,121 @@
+/* Estilos adicionales para productos preordenados en el carrito */
+
+/* Resaltar elementos de preorden en el carrito */
+.cart-item.preorder-item {
+    border: 1px solid var(--color-primary);
+    background: linear-gradient(to right, rgba(255, 42, 109, 0.05), rgba(0, 0, 0, 0));
+    position: relative;
+    overflow: hidden;
+}
+
+.cart-item.preorder-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-primary);
+    animation: pulseGlow 2s infinite;
+}
+
+.cart-item.preorder-highlight {
+    box-shadow: 0 0 15px rgba(255, 42, 109, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cart-item.preorder-highlight:hover {
+    box-shadow: 0 0 20px rgba(255, 42, 109, 0.3);
+}
+
+.preorder-badge {
+    background: var(--color-primary);
+    color: #000;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.release-date {
+    font-size: 0.8rem;
+    color: #fff;
+    opacity: 0.8;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.preorder-info-badge {
+    background: rgba(255, 42, 109, 0.1);
+    border-left: 3px solid var(--color-primary);
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.8rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.preorder-info-badge i {
+    color: var(--color-primary);
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+/* Animación para el borde izquierdo */
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* Estilos para la sección de preórdenes en el resumen del carrito */
+.cart-summary .preorder-summary {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cart-summary .preorder-summary h4 {
+    font-family: var(--font-secondary);
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-summary .preorder-summary h4 i {
+    margin-right: 8px;
+}
+
+.cart-summary .preorder-summary p {
+    font-size: 0.8rem;
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .cart-item.preorder-item {
+        padding-left: 10px;
+    }
+    
+    .preorder-info-badge {
+        font-size: 0.7rem;
+        padding: 6px 8px;
+    }
+}

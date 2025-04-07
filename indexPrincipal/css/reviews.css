@@ -1,0 +1,473 @@
+.reviews {
+    position: relative;
+    background-color: var(--color-bg-darker);
+    padding: var(--spacing-xl) 0;
+    overflow: hidden;
+}
+
+.reviews::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 0, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.section-header .accent {
+    color: var(--color-accent);
+}
+
+/* Aplicando el nuevo diseño de tarjetas cyberpunk */
+.reviews-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.review-card {
+    background: rgba(15, 15, 35, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    width: calc(33.33% - 2rem);
+    min-width: 300px;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2);
+}
+
+.card-glare {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    transform: translate(-50%, -50%) rotate(30deg) scale(2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.card-hologram {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        rgba(0, 255, 255, 0.05) 0%,
+        rgba(255, 0, 255, 0.05) 50%,
+        rgba(0, 255, 255, 0.05) 100%
+    );
+    pointer-events: none;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.reviewer-badge {
+    position: relative;
+    margin-right: 1.5rem;
+}
+
+.reviewer-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #00ffff;
+    position: relative;
+}
+
+.reviewer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.verified-badge {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: #00ffff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f0c29;
+    font-size: 0.8rem;
+    border: 2px solid #0f0c29;
+}
+
+.reviewer-level {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff00ff;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.reviewer-info h4 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.gamer-tag {
+    color: #00ffff;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    font-weight: normal;
+}
+
+.review-stats {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating-value {
+    color: #fff;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.stars {
+    color: #ffcc00;
+    font-size: 0.9rem;
+}
+
+.playtime {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.review-content {
+    margin-bottom: 2rem;
+}
+
+.review-quote {
+    position: relative;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid #00ffff;
+    margin-bottom: 1.5rem;
+    border-radius: 0 5px 5px 0;
+}
+
+.review-quote i:first-child {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgba(0, 255, 255, 0.3);
+    font-size: 1.5rem;
+}
+
+.review-quote i:last-child {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: rgba(0, 255, 255, 0.3);
+    font-size: 1.5rem;
+}
+
+.review-quote p {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.review-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.review-game {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.game-poster {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.game-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-rating {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffcc00;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.game-info {
+    flex: 1;
+}
+
+.game-info h5 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.platform-badge {
+    display: inline-block;
+    background: #0070cc;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.platform-badge.ps5 {
+    background: linear-gradient(45deg, #0070cc, #00baff);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 0.3rem;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+    transition: width 0.5s ease;
+}
+
+.completion {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+.review-date {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+}
+
+.review-actions {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.like-btn, .comment-btn, .share-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.like-btn:hover, .comment-btn:hover, .share-btn:hover {
+    background: rgba(0, 255, 255, 0.1);
+    color: #00ffff;
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+/* Removing slider controls */
+.reviews-controls {
+    display: none;
+}
+
+/* Improving trust badges */
+.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(15, 15, 35, 0.6);
+    border-radius: 15px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+}
+
+.badge:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 255, 255, 0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+.badge i {
+    font-size: 2.5rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.badge:hover i {
+    transform: scale(1.2);
+    color: #ff00ff;
+}
+
+.badge h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
+
+.badge p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .trust-badges {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .review-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .trust-badges {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .review-card {
+        width: 100%;
+    }
+    
+    .badge {
+        padding: 1.5rem 1rem;
+    }
+}

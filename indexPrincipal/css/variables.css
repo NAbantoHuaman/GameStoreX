@@ -1,0 +1,104 @@
+/* variables.css - Paleta de colores y variables para el tema Cyberpunk */
+
+:root {
+    /* Colores principales */
+    --color-primary: #00f3ff; /* Neón cian */
+    --color-secondary: #ff00ff; /* Neón magenta */
+    --color-tertiary: #ffff00; /* Neón amarillo */
+    --color-accent: #ff0066; /* Rosa neón */
+    
+    /* Colores de fondo */
+    --color-bg-dark: #0a0a12; /* Fondo principal oscuro */
+    --color-bg-darker: #050508; /* Fondo secundario más oscuro */
+    --color-bg-card: rgba(16, 16, 28, 0.8); /* Fondo para tarjetas */
+    --color-bg-card-hover: rgba(25, 25, 40, 0.9); /* Fondo para tarjetas en hover */
+    
+    /* Degradados */
+    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-accent)); /* Degradado principal */
+    --gradient-card: linear-gradient(180deg, rgba(0, 243, 255, 0.1), rgba(255, 0, 255, 0.05)); /* Degradado para tarjetas */
+    --gradient-button: linear-gradient(90deg, var(--color-primary), var(--color-accent)); /* Degradado para botones */
+    --gradient-section: linear-gradient(180deg, rgba(10, 10, 18, 0.8), rgba(5, 5, 8, 0.9)); /* Degradado para secciones */
+    
+    /* Sombras y brillos */
+    --neon-shadow-primary: 0 0 10px rgba(0, 243, 255, 0.7), 0 0 20px rgba(0, 243, 255, 0.5), 0 0 30px rgba(0, 243, 255, 0.3); /* Sombra neón cian */
+    --neon-shadow-secondary: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(255, 0, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.3); /* Sombra neón magenta */
+    --neon-shadow-accent: 0 0 10px rgba(255, 0, 102, 0.7), 0 0 20px rgba(255, 0, 102, 0.5), 0 0 30px rgba(255, 0, 102, 0.3); /* Sombra neón rosa */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra estándar */
+    
+    /* Bordes */
+    --border-neon: 1px solid var(--color-primary); /* Borde neón */
+    --border-glow: 1px solid rgba(0, 243, 255, 0.5); /* Borde con brillo */
+    --border-radius-sm: 4px; /* Radio de borde pequeño */
+    --border-radius-md: 8px; /* Radio de borde mediano */
+    --border-radius-lg: 12px; /* Radio de borde grande */
+    
+    /* Tipografía */
+    --font-primary: 'Rajdhani', sans-serif; /* Fuente principal */
+    --font-secondary: 'Orbitron', sans-serif; /* Fuente para títulos */
+    --font-tertiary: 'Exo 2', sans-serif; /* Fuente para textos */
+    
+    /* Tamaños de fuente */
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-md: 1rem; /* 16px */
+    --font-size-lg: 1.25rem; /* 20px */
+    --font-size-xl: 1.5rem; /* 24px */
+    --font-size-2xl: 2rem; /* 32px */
+    --font-size-3xl: 2.5rem; /* 40px */
+    --font-size-4xl: 3rem; /* 48px */
+    
+    /* Espaciado */
+    --spacing-xs: 0.25rem; /* 4px */
+    --spacing-sm: 0.5rem; /* 8px */
+    --spacing-md: 1rem; /* 16px */
+    --spacing-lg: 1.5rem; /* 24px */
+    --spacing-xl: 2rem; /* 32px */
+    --spacing-2xl: 3rem; /* 48px */
+    --spacing-3xl: 4rem; /* 64px */
+    
+    /* Transiciones */
+    --transition-fast: 0.2s ease; /* Transición rápida */
+    --transition-normal: 0.3s ease; /* Transición normal */
+    --transition-slow: 0.5s ease; /* Transición lenta */
+    
+    /* Z-index */
+    --z-index-dropdown: 100;
+    --z-index-sticky: 200;
+    --z-index-fixed: 300;
+    --z-index-modal: 400;
+    --z-index-popover: 500;
+    --z-index-tooltip: 600;
+    --z-index-preloader: 1000;
+    
+    /* Contenedor */
+    --container-padding: 1rem;
+    --container-max-width: 1200px;
+    
+    /* Efectos especiales */
+    --glitch-intensity: 5px; /* Intensidad del efecto glitch */
+    --scan-line-opacity: 0.15; /* Opacidad de las líneas de escaneo */
+    --scan-line-spacing: 8px; /* Espaciado entre líneas de escaneo */
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 0.75rem;
+        --font-size-4xl: 2.5rem;
+        --font-size-3xl: 2rem;
+        --font-size-2xl: 1.75rem;
+        --spacing-3xl: 3rem;
+        --spacing-2xl: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 0.5rem;
+        --font-size-4xl: 2rem;
+        --font-size-3xl: 1.75rem;
+        --font-size-2xl: 1.5rem;
+        --spacing-3xl: 2.5rem;
+        --spacing-2xl: 1.5rem;
+    }
+}

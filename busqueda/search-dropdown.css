@@ -1,0 +1,103 @@
+/**
+ * Estilos para el dropdown de búsqueda en tiempo real
+ */
+
+.search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  margin-top: 2px;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.search-result-item:hover {
+  background-color: #2a2a4a;
+}
+
+.search-result-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.search-result-info {
+  flex: 1;
+}
+
+.search-result-title {
+  font-weight: 600;
+  color: #e6e6e6;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.search-result-category {
+  color: #0ea5e9;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.search-result-price {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.search-view-all {
+  text-align: center;
+  padding: 12px;
+  background-color: #16213e;
+  color: #e6e6e6;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-view-all:hover {
+  background-color: #0ea5e9;
+  color: #fff;
+}
+
+.search-no-results {
+  padding: 15px;
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Estilos para la barra de búsqueda cuando está enfocada */
+.search-bar:focus-within,
+.gc-search-bar:focus-within {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.3);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .search-results-dropdown {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    max-height: 60vh;
+  }
+}

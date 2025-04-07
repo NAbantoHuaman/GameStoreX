@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - GameStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/indexPrincipal/css/main.css">
+    <link rel="stylesheet" href="/catalogo/catalogo.css">
+    <link rel="stylesheet" href="/busqueda/search-dropdown.css">
+    <link rel="stylesheet" href="/catalogo/rpg/rpg.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/new_index.html">
+                    <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                    <span class="logo-text">GAME<span class="accent">STORE</span></span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="/new_index.html">Inicio</a></li>
+                    <li><a href="/catalogo/catalogo.html" class="active">Catálogo</a></li>
+                    <li><a href="/nosotros/nosotros.html">Nosotros</a></li>
+                    <li><a href="/navegacion/blog.html">Blog</a></li>
+                    <li><a href="/soporte/soporte.html">Soporte</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar juegos...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <a href="/carrito/carrito.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="/Isesion/index.html" class="user-icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-title">
+        <h2 class="logo">🌍 Juegos de Aventura</h2>
+    </div>
+
+    <section class="featured-games section">
+        <div class="container">
+            <div class="section-header">
+                <h2>JUEGOS <span class="accent">AVENTURA</span></h2>
+                <div class="quick-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="accion">Acción</button>
+                    <button class="filter-btn" data-filter="mundo-abierto">Mundo Abierto</button>
+                    <button class="filter-btn" data-filter="exclusivos">Exclusivos</button>
+                </div>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card" data-category="exclusivos">
+                    <div class="game-card-header">
+                        <span class="game-tag">Exclusivo</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos2/1654560614-final-fantasy-xvi-ps5-pre-orden-0.jpg" alt="FINAL FANTASY XVI"
+                            class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=final-fantasy-xvi" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>FINAL FANTASY XVI</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="accion">
+                    <div class="game-card-header">
+                        <span class="game-tag">Nuevo</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos2/1659477995-a-plague-tale-requiem-ps5-pre-orden-0.jpg"
+                            alt="A Plague Tale Requiem" class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=a-plague-tale-requiem" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>A Plague Tale Requiem</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="accion">
+                    <div class="game-card-header">
+                        <span class="game-tag">Destacado</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos2/1689120412-lies-of-p-ps5-pre-orden-0.jpg" alt="Lies Of P"
+                            class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=lies-of-p" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Lies Of P</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="accion">
+                    <div class="game-card-header">
+                        <span class="game-tag">Ultimate</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos2/1679425138-back-4-blood-ultimate-edition-ps5-0.jpg"
+                            alt="Back 4 Blood Ultimate Edition" class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=back-4-blood" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Back 4 Blood Ultimate</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.3</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="mundo-abierto">
+                    <div class="game-card-header">
+                        <span class="game-tag">Deluxe</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos2/1692833779-assassins-creed-valhalla-deluxe-ps5-0.jpg"
+                            alt="Assassins Creed Valhalla Deluxe" class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=assassins-creed-valhalla" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Assassins Creed Valhalla</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="mundo-abierto">
+                    <div class="game-card-header">
+                        <span class="game-tag">Deluxe</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos2/1646843815-assassins-creed-origins-deluxe-edition-ps5.jpg"
+                            alt="Assassin's Creed Origins Deluxe Edition" class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=assassins-creed-origins" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Assassin's Creed Origins</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="mundo-abierto">
+                    <div class="game-card-header">
+                        <span class="game-tag">Popular</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos2/1730415530-cyberpunk-2077-ps5-0.webp" alt="Cyberpunk 2077"
+                            class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=cyberpunk-2077" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Cyberpunk 2077</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.4</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="mundo-abierto">
+                    <div class="game-card-header">
+                        <span class="game-tag">Clásico</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos/1740506597-the-witcher-3-wild-hunt-ps5-0.webp"
+                            alt="The Witcher 3: Wild Hunt" class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=the-witcher-3" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>The Witcher 3: Wild Hunt</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-category="mundo-abierto">
+                    <div class="game-card-header">
+                        <span class="game-tag">Épico</span>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="game-image-container">
+                        <img src="/img/juegos/1692382805-red-dead-redemption-ps5-0.jpg" alt="Red Dead Redemption 2"
+                            class="game-image">
+                        <div class="game-overlay">
+                            <a href="/producto.html?id=red-dead-redemption-2" class="btn-details">Ver detalles</a>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Red Dead Redemption 2</h3>
+                        <div class="game-meta">
+                            <span class="game-category">Aventura</span>
+                            <div class="game-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <div class="game-price-actions">
+                            <div class="game-price">S/. 59.99</div>
+                            <button class="btn-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                        <span class="logo-text">GAME<span class="accent">ZONE</span></span>
+                    </div>
+                    <p>Tu tienda especializada en videojuegos y accesorios para PlayStation 5. Ofrecemos los mejores
+                        títulos, al mejor precio y con la mejor atención.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="/new_index.html">Inicio</a></li>
+                        <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                        <li><a href="/navegacion/ofertas-especiales.html">Ofertas</a></li>
+                        <li><a href="/navegacion/exclusivos-ps5.html">Exclusivos PS5</a></li>
+                        <li><a href="/navegacion/preordenes.html">Pre-órdenes</a></li>
+                        <li><a href="/navegacion/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ayuda & Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="/soporte/soporte.html">Contacto</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Envíos y Entregas</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima</li>
+                        <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@gamezone.pe</li>
+                        <li><i class="fas fa-clock"></i> Lun-Vie: 9am-7pm | Sáb: 10am-5pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="payment-methods">
+                    <h3>Métodos de Pago</h3>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <img src="/img/noticias/ICONOS-yape-para-pagina-png.webp" alt="Yape">
+                        <img src="/img/noticias/images.jpeg" alt="Plin">
+                    </div>
+                </div>
+                <div class="security-badges">
+                    <h3>Compra Segura</h3>
+                    <div class="security-icons">
+                        <img src="/img/payment/ssl.jpg" alt="SSL">
+                        <img src="/img/payment/9721115.png" alt="Pago Seguro">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+                <div class="language-selector">
+                    <select>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/script/main.js" defer></script>
+    <script src="/busqueda/search.js" defer></script>
+    <script src="/busqueda/resultados.js" defer></script>
+    <script src="/script/preorder-manager.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone | Tu tienda de videojuegos PS5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/indexPrincipal/css/main.css">
+    <link rel="stylesheet" href="/indexPrincipal/css/user-welcome.css">
+    <link rel="stylesheet" href="/busqueda/search-dropdown.css">
+    <link rel="stylesheet" href="/script/preorder-notification.css">
+    <link rel="stylesheet" href="/perfil/perfil.css">
+</head>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="/new_index.html">
+                <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                <span class="logo-text">GAME<span class="accent">STORE</span></span>
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="/new_index.html" class="active">Inicio</a></li>
+                <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                <li><a href="/nosotros/nosotros.html">Nosotros</a></li>
+                <li><a href="/navegacion/blog.html">Blog</a></li>
+                <li><a href="/soporte/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Buscar en el header -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar juegos...">
+                <button id="searchButton" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <a href="/carrito/carrito.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="/Isesion/index.html" class="user-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+    <main class="profile-container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <span id="profileInitial">U</span>
+                </div>
+                <div class="profile-info">
+                    <h1 id="profileName">Usuario</h1>
+                    <p class="profile-email" id="profileEmail">usuario@email.com</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <i class="fas fa-gamepad"></i>
+                            <span id="gamesCount">0</span>
+                            <small>Juegos</small>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-heart"></i>
+                            <span id="wishlistCount">0</span>
+                            <small>Favoritos</small>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-star"></i>
+                            <span id="reviewsCount">0</span>
+                            <small>Reseñas</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="activity">Actividad</button>
+                <button class="tab-btn" data-tab="wishlist">Favoritos</button>
+                <button class="tab-btn" data-tab="collection">Colección</button>
+                <button class="tab-btn" data-tab="settings">Ajustes</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Actividad Tab -->
+                <div class="tab-pane active" id="activity">
+                    <h2>Actividad Reciente</h2>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h3>No hay compras recientes</h3>
+                                <p>
+                                    Explora nuestro catálogo para encontrar tus juegos favoritos
+                                </p>
+                                <span class="activity-time">-</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h3>No hay favoritos recientes</h3>
+                                <p>
+                                    Añade juegos a tu lista de deseos para seguir sus precios
+                                </p>
+                                <span class="activity-time">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Favoritos Tab -->
+                <div class="tab-pane" id="wishlist">
+                    <div class="section-header">
+                        <h2>Lista de Deseos</h2>
+                    </div>
+                    <div class="wishlist-container" id="wishlistContainer">
+                        <p class="empty-state" id="emptyWishlist">
+                            No tienes productos en tu lista de deseos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Colección Tab -->
+                <div class="tab-pane" id="collection">
+                    <div class="section-header">
+                        <h2>Mi Colección</h2>
+                    </div>
+                    <div class="collection-container" id="collectionContainer">
+                        <p class="empty-state">
+                            No tienes juegos en tu colección. ¡Explora nuestro catálogo para
+                            comenzar!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ajustes Tab -->
+                <div class="tab-pane" id="settings">
+                    <h2>Ajustes de Perfil</h2>
+                    <form id="profileForm" class="settings-form">
+                        <div class="form-group">
+                            <label for="profileNameInput">Nombre</label>
+                            <input type="text" id="profileNameInput" placeholder="Tu nombre" />
+                        </div>
+                        <div class="form-group">
+                            <label for="profileEmailInput">Email</label>
+                            <input type="email" id="profileEmailInput" placeholder="tu@email.com" disabled />
+                        </div>
+                        <div class="form-group">
+                            <label for="profileBio">Biografía</label>
+                            <textarea id="profileBio" rows="3" placeholder="Cuéntanos sobre ti..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                        <span class="logo-text">GAME<span class="accent">ZONE</span></span>
+                    </div>
+                    <p>
+                        Tu tienda especializada en videojuegos y accesorios para
+                        PlayStation 5. Ofrecemos los mejores títulos, al mejor precio y
+                        con la mejor atención.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Catálogo</a></li>
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Exclusivos PS5</a></li>
+                        <li><a href="#">Pre-órdenes</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ayuda & Soporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Envíos y Entregas</a></li>
+                        <li><a href="#">Devoluciones</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima
+                        </li>
+                        <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@gamezone.pe</li>
+                        <li>
+                            <i class="fas fa-clock"></i> Lun-Vie: 9am-7pm | Sáb: 10am-5pm
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="payment-methods">
+                    <h3>Métodos de Pago</h3>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <img src="/img/noticias/ICONOS-yape-para-pagina-png.webp" alt="Yape" />
+                        <img src="img/noticias/images.jpeg" alt="Plin" />
+                    </div>
+                </div>
+                <div class="security-badges">
+                    <h3>Compra Segura</h3>
+                    <div class="security-icons">
+                        <img src="/img/payment/ssl.jpg" alt="SSL" />
+                        <img src="/img/payment/9721115.png" alt="Pago Seguro" />
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+                <div class="language-selector">
+                    <select>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/perfil/perfil.js"></script>
+    <script src="/script/main.js" defer></script>
+    <script src="/busqueda/search.js" defer></script>
+    <script src="/busqueda/resultados.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+/* Estilos para la página de Juegos Destacados */
+
+.featured-games-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 80px; /* Espacio para el header fijo */
+}
+
+/* Hero section */
+.featured-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/img/juegos/1639687011-elden-ring-ps5-pre-orden.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.featured-hero .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.featured-hero h3 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff2a6d;
+  text-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+}
+
+.featured-hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d7e0;
+}
+
+/* Filtros */
+.featured-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-options {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: #1a1a2e;
+  color: #d1d7e0;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.filter-btn.active {
+  background: #ff2a6d;
+  color: white;
+  box-shadow: 0 5px 15px rgba(255, 42, 109, 0.3);
+}
+
+.filter-btn:hover:not(.active) {
+  background: #16213e;
+  color: #ff2a6d;
+}
+
+.sort-options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sort-options label {
+  color: #d1d7e0;
+}
+
+.sort-options select {
+  background: #1a1a2e;
+  color: #d1d7e0;
+  border: 1px solid #2a2a4a;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Grid de juegos */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.game-card {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.game-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.game-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.game-card:hover .game-image img {
+  transform: scale(1.05);
+}
+
+.game-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-rating span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ff2a6d;
+  margin-bottom: 0.3rem;
+}
+
+.stars {
+  color: #ffcc00;
+  font-size: 0.8rem;
+}
+
+.game-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-card h4 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ff2a6d;
+}
+
+.game-genre {
+  color: #05d9e8;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.game-price {
+  margin-bottom: 1.2rem;
+}
+
+.current-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #d1d7e0;
+}
+
+.game-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.view-details {
+  color: #05d9e8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.view-details:hover {
+  color: #ff2a6d;
+}
+
+.add-to-cart {
+  background: linear-gradient(90deg, #ff2a6d, #d61c4e);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 42, 109, 0.3);
+}
+
+.add-to-cart:hover {
+  background: linear-gradient(90deg, #d61c4e, #ff2a6d);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 42, 109, 0.4);
+}
+
+/* Botón cargar más */
+.load-more {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.load-more-btn {
+  background: linear-gradient(90deg, #ff2a6d, #d61c4e);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 42, 109, 0.3);
+}
+
+.load-more-btn:hover {
+  background: linear-gradient(90deg, #d61c4e, #ff2a6d);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 42, 109, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .featured-hero h3 {
+    font-size: 2rem;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-games-container {
+    padding: 1rem;
+  }
+
+  .featured-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort-options {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .sort-options select {
+    flex-grow: 1;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+}

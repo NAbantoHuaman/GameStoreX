@@ -1,0 +1,198 @@
+/* offers.css - Estilos para la sección de ofertas especiales con tema Cyberpunk */
+
+.offers {
+    position: relative;
+    background-color: var(--color-bg-dark);
+    overflow: hidden;
+}
+
+.offers::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 0, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Grid de ofertas */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    position: relative;
+    z-index: 2;
+}
+
+/* Tarjeta de oferta */
+.offer-card {
+    position: relative;
+    background-color: var(--color-bg-card);
+    border: 1px solid rgba(255, 255, 0, 0.2);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition-normal);
+    transform: translateY(0);
+}
+
+.offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 0, 0.1), rgba(255, 0, 102, 0.05));
+    opacity: 0;
+    transition: var(--transition-normal);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.offer-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-tertiary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 0, 0.3);
+}
+
+.offer-card:hover::before {
+    opacity: 1;
+}
+
+/* Temporizador de oferta */
+.offer-timer {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: 4px 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--color-tertiary);
+    border-radius: var(--border-radius-sm);
+    z-index: 3;
+}
+
+.offer-timer i {
+    color: var(--color-tertiary);
+    font-size: var(--font-size-xs);
+}
+
+.countdown {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-tertiary);
+    letter-spacing: 1px;
+}
+
+/* Contenedor de imagen */
+.offer-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Proporción 16:9 */
+    overflow: hidden;
+}
+
+.offer-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    z-index: 2;
+}
+
+.offer-card:hover .offer-image {
+    transform: scale(1.05);
+}
+
+/* Contenido de la oferta */
+.offer-content {
+    padding: var(--spacing-md);
+    position: relative;
+    z-index: 2;
+}
+
+.offer-content h3 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: #fff;
+    transition: var(--transition-normal);
+}
+
+.offer-card:hover .offer-content h3 {
+    color: var(--color-tertiary);
+}
+
+/* Precios */
+.offer-prices {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.original-price {
+    font-family: var(--font-tertiary);
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: line-through;
+}
+
+.discount-price {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-tertiary);
+}
+
+.discount-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: rgba(255, 255, 0, 0.2);
+    border: 1px solid var(--color-tertiary);
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-tertiary);
+}
+
+/* Botón de compra */
+.btn-block {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .offers-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .offer-content h3 {
+        font-size: var(--font-size-sm);
+    }
+    
+    .discount-price {
+        font-size: var(--font-size-md);
+    }
+}

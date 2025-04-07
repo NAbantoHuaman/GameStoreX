@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone | Tu tienda de videojuegos PS5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/indexPrincipal/css/main.css">
+    <link rel="stylesheet" href="/carrito/carrito.css">
+    <link rel="stylesheet" href="/carrito/preorder-cart.css">
+    <link rel="stylesheet" href="/busqueda/search-dropdown.css">
+</head>
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="/new_index.html">
+                <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                <span class="logo-text">GAME<span class="accent">STORE</span></span>
+            </a>
+        </div>
+
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="/new_index.html">Inicio</a></li>
+                <li><a href="/catalogo/catalogo.html">Catálogo</a></li>
+                <li><a href="/nosotros/nosotros.html">Nosotros</a></li>
+                <li><a href="/navegacion/blog.html">Blog</a></li>
+                <li><a href="/soporte/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar juegos...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="/Isesion/index.html" class="user-icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+<div class="section-title">
+    <h2 class="logo">🛒 Tu Carrito de Compras</h2>
+</div>
+
+<main class="cart-container">
+    <!-- Si el carrito está vacío, mostrar esto: -->
+    <div class="cart-empty" style="display: none;" id="emptyCart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="64" height="64">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <h3>Tu carrito está vacío</h3>
+        <p>Parece que aún no has añadido ningún juego a tu carrito.</p>
+        <a href="/new_index.html" class="button details-btn">
+            <span>Explorar Juegos</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="24"
+                height="24">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Si hay items en el carrito, mostrar esto: -->
+    <div class="cart-items" id="cartItems">
+        <!-- Item 1 -->
+        <div class="cart-item" data-id="1" data-price="59.99">
+            <img src="/principal/img/juegos/1639687011-elden-ring-ps5-pre-orden.jpg" alt="Elden Ring"
+                class="cart-item-image" width="120" height="150" loading="lazy">
+            <div class="cart-item-details">
+                <h3 class="cart-item-title">Elden Ring</h3>
+                <p class="cart-item-price">$59.99</p>
+            </div>
+            <div class="cart-item-actions">
+                <div class="quantity-control" role="group" aria-label="Cantidad de Elden Ring">
+                    <button class="quantity-btn decrease-btn" aria-label="Disminuir cantidad">-</button>
+                    <input type="text" class="quantity-input" value="1" readonly aria-label="Cantidad">
+                    <button class="quantity-btn increase-btn" aria-label="Aumentar cantidad">+</button>
+                </div>
+                <button class="remove-btn" aria-label="Eliminar Elden Ring del carrito">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="24"
+                        height="24">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    Eliminar
+                </button>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="cart-item">
+            <img src="/principal/img/juegos/1697557602-marvels-spider-man-2-ps5-pre-orden-0.jpg" alt="Spider-Man 2"
+                class="cart-item-image">
+            <div class="cart-item-details">
+                <h3 class="cart-item-title">MARVEL'S SPIDER MAN 2</h3>
+                <p class="cart-item-price">S/. 159.00</p>
+            </div>
+            <div class="cart-item-actions">
+                <div class="quantity-control">
+                    <button class="quantity-btn">-</button>
+                    <input type="text" class="quantity-input" value="1" readonly>
+                    <button class="quantity-btn">+</button>
+                </div>
+                <button class="remove-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    Eliminar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resumen del carrito -->
+    <div class="cart-summary" id="cartSummary">
+        <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="subtotal">S/. 218.99</span>
+        </div>
+        <div class="summary-row">
+            <span>Envío:</span>
+            <span id="shipping">Gratis</span>
+        </div>
+        <div class="summary-row">
+            <span>Impuestos:</span>
+            <span id="taxes">S/. 21.90</span>
+        </div>
+        <div class="summary-row total-row">
+            <span>Total:</span>
+            <span id="total">S/. 240.89</span>
+        </div>
+
+        <button class="checkout-btn"><a href="/pago/pago.html">Proceder al Pago</a></button>
+        <a href="/new_index.html" class="continue-shopping">← Continuar Comprando</a>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                    <span class="logo-text">GAME<span class="accent">ZONE</span></span>
+                </div>
+                <p>Tu tienda especializada en videojuegos y accesorios para PlayStation 5. Ofrecemos los mejores
+                    títulos, al mejor precio y con la mejor atención.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Exclusivos PS5</a></li>
+                    <li><a href="#">Pre-órdenes</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ayuda & Soporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Envíos y Entregas</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Lima</li>
+                    <li><i class="fas fa-phone"></i> +51 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@gamezone.pe</li>
+                    <li><i class="fas fa-clock"></i> Lun-Vie: 9am-7pm | Sáb: 10am-5pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <div class="payment-methods">
+                <h3>Métodos de Pago</h3>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <img src="/img/noticias/ICONOS-yape-para-pagina-png.webp" alt="Yape">
+                    <img src="img/noticias/images.jpeg" alt="Plin">
+                </div>
+            </div>
+            <div class="security-badges">
+                <h3>Compra Segura</h3>
+                <div class="security-icons">
+                    <img src="img/payment/ssl.jpg" alt="SSL">
+                    <img src="img/payment/9721115.png" alt="Pago Seguro">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+            <div class="language-selector">
+                <select>
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="neon-particles" id="neonParticles"
+    style="pointer-events: none; position: fixed; width: 100vw; height: 100vh; overflow: hidden;"></div>
+<div class="neon-grid"></div>
+<!-- <script src="/principal/script.js" defer></script> -->
+<script src="/carrito/carrito.js" defer></script>
+<script src="/script/main.js" defer></script>
+<script src="/busqueda/search.js" defer></script>
+<script src="/busqueda/resultados.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+/* Tablets grandes y laptops pequeñas */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .section-header h2 {
+        font-size: calc(var(--font-size-2xl) - 0.25rem);
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Ajustes para el encabezado */
+    .header .container {
+        padding-top: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+    }
+    
+    /* Ajustes para partículas */
+    .particles-container {
+        opacity: 0.3;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    .section {
+        padding: var(--spacing-md) 0;
+    }
+    
+    /* Ajustes para efectos */
+    .scan-lines::after {
+        opacity: 0.05;
+    }
+    
+    /* Reducir intensidad de animaciones */
+    .neon-text,
+    .neon-border::before,
+    .logo-icon,
+    .logo-text .accent {
+        animation-duration: 3s;
+    }
+    
+    /* Ajustes para botones */
+    .btn {
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .section-header h2 {
+        font-size: var(--font-size-xl);
+    }
+    
+    /* Simplificar algunos efectos visuales */
+    .glitch-text {
+        animation: none;
+    }
+    
+    /* Ajustes para el preloader */
+    .preloader .loading-text {
+        font-size: var(--font-size-md);
+    }
+    
+    /* Reducir espaciado */
+    .section + .section {
+        margin-top: 0;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 375px) {
+    body {
+        font-size: 13px;
+    }
+    
+    .logo-text {
+        font-size: var(--font-size-sm);
+    }
+    
+    .cart-icon,
+    .user-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* Simplificar aún más los efectos */
+    .neon-shadow-primary,
+    .neon-shadow-secondary,
+    .neon-shadow-accent {
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
+
+/* Ajustes para pantallas de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .scan-lines::after {
+        background-size: 100% calc(var(--scan-line-spacing) * 2);
+    }
+}
+
+/* Ajustes para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-primary: #00f3ff; /* Mantener el neón cian pero quizás más brillante */
+        --neon-shadow-primary: 0 0 15px rgba(0, 243, 255, 0.8), 0 0 30px rgba(0, 243, 255, 0.6), 0 0 45px rgba(0, 243, 255, 0.4);
+    }
+}
+
+/* Ajustes para preferencias de movimiento reducido */
+@media (prefers-reduced-motion) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+    
+    .scan-lines::after {
+        animation: none !important;
+    }
+    
+    .particles-container {
+        display: none;
+    }
+}
