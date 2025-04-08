@@ -1,0 +1,29 @@
+.header {
+    z-index: 100; /* Reducido de 1000 para mejor interacción con otros elementos */
+}
+
+.slide-content {
+    padding-top: 120px; /* Aumentado de 80px para dar más espacio debajo del header */
+}
+
+/* Ajustar la posición del hero para que comience después del header */
+.hero {
+    padding-top: 70px; 
+    height: calc(100vh - 70px); 
+}
+
+/* Mejorar la visibilidad del contenido del slider */
+.slide-overlay {
+    background: linear-gradient(to right, rgba(5, 5, 8, 0.9), rgba(5, 5, 8, 0.5));
+}
+
+/* Asegurar que los badges y títulos sean más visibles */
+.slide-badge {
+    position: relative;
+    z-index: 5;
+}
+
+.glitch-text {
+    position: relative;
+    z-index: 5;
+}

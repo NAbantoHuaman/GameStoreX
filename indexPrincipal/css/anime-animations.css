@@ -1,0 +1,146 @@
+.animated {
+    visibility: visible;
+}
+
+/* Efecto de onda para botones */
+.btn-cart, .btn-secondary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: ripple-effect 0.6s linear;
+    z-index: -1;
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Transiciones suaves para tarjetas */
+.game-card, .category-card, .offer-card, .upcoming-card, .blog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de brillo para texto con clase glitch-text */
+.glitch-text {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+/* Animación para secciones al hacer scroll */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación para el contador del carrito */
+.cart-count {
+    transition: transform 0.3s ease;
+}
+
+/* Animación para el logo */
+.logo-icon {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(20deg);
+}
+
+/* Animaciones para los botones de slider */
+.slider-controls button {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slider-controls button:hover {
+    transform: scale(1.2);
+}
+
+/* Animación para los dots del slider */
+.slider-dots .dot {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+    transform: scale(1.2);
+}
+
+.slider-dots .dot:hover {
+    transform: scale(1.1);
+}
+
+/* Animación para los badges y etiquetas */
+.slide-badge, .game-tag, .promo-tag, .discount-tag {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animación para los precios en ofertas */
+.discount-price {
+    position: relative;
+    display: inline-block;
+}
+
+.discount-price::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color, #ff5722);
+    transition: width 0.3s ease;
+}
+
+.offer-card:hover .discount-price::after {
+    width: 100%;
+}
+
+/* Animación para los iconos de categorías */
+.category-icon {
+    transition: transform 0.5s ease, color 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+    transform: translateY(-5px);
+    color: var(--accent-color, #ff5722);
+}
+
+/* Animación para los botones de filtro */
+.filter-btn {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    transform: translateY(-2px);
+}

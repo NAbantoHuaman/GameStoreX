@@ -1,143 +1,111 @@
 # GameStore - Tienda de Videojuegos
 
 ## Descripción
-GameStore es una tienda de videojuegos en línea diseñada para ofrecer una experiencia de compra inmersiva y accesible para los usuarios. Este proyecto ha evolucionado desde su versión inicial en HTML5 puro a una aplicación web completa que utiliza HTML5, CSS3 y JavaScript para crear una experiencia de usuario moderna y dinámica.
+GameStore es una tienda de videojuegos en línea que ofrece una experiencia de compra inmersiva y moderna. Desarrollada con HTML5, CSS3 y JavaScript, la plataforma presenta un diseño futurista con efectos neón y una interfaz intuitiva para los usuarios.
 
 ## Características
-- Diseño moderno con efectos neón y partículas animadas
-- Página principal que muestra los últimos lanzamientos
-- Catálogo de juegos con filtrado por categorías
-- Páginas detalladas de productos con galería de imágenes
+- Interfaz moderna con efectos visuales neón
+- Catálogo completo de videojuegos por categorías
 - Sistema de búsqueda en tiempo real
-- Carrito de compras funcional con almacenamiento local
-- Lista de deseos para guardar productos favoritos
-- Sistema de registro e inicio de sesión
-- Diseño responsive para dispositivos móviles y de escritorio
-- Efectos visuales avanzados como lightbox para imágenes
-- Páginas adicionales como soporte, contacto, nosotros y noticias
+- Carrito de compras con persistencia local
+- Autenticación de usuarios
+- Diseño responsive multiplataforma
+- Detalles de productos con galería de imágenes
+- Sistema de partículas dinámicas
 
 ## Estructura del Proyecto
-/GmeStoreZ
-│
-├── /Isesion
-│   ├── index.html
-│   ├── registro.html
-│   ├── sesion.js
-│   └── styles.css
-│
-├── /principal
-│   ├── /dst
-│   │   ├── main.css
-│   │   └── responsive.css
-│   │
-│   ├── /img
-│   │   ├── /juegos
-│   │   │   └── [imágenes de juegos]
-│   │   ├── /juegos2
-│   │   │   └── [imágenes adicionales]
-│   │   └── /banners
-│   │       └── [banners promocionales]
-│   │
-│   ├── /pages
-│   │   ├── /catalogo
-│   │   │   ├── catalogo.html
-│   │   │   ├── accion.html
-│   │   │   └── [otras categorías]
-│   │   │
-│   │   ├── /productos
-│   │   │   ├── productos.js
-│   │   │   ├── products.css
-│   │   │   ├── assassins.html
-│   │   │   ├── doom.html
-│   │   │   └── [otros productos]
-│   │   │
-│   │   ├── carrito.html
-│   │   ├── contacto.html
-│   │   ├── nosotros.html
-│   │   ├── resultados-busqueda.html
-│   │   └── soporte.html
-│   │
-│   ├── particulas.js
-│   ├── responsive.js
-│   ├── script.js
-│   ├── search.js
-│   └── README.md
-│
+```
+GameStore/
 ├── index.html
-└── README.md
-
+├── producto.html
+├── busqueda/
+│   ├── resultados-busqueda.html
+│   ├── resultados.css
+│   ├── resultados.js
+│   ├── search-dropdown.css
+│   └── search.js
+├── carrito/
+│   ├── carrito.css
+│   ├── carrito.html
+│   ├── carrito.js
+│   └── preorder-cart.css
+├── catalogo/
+│   ├── catalogo.css
+│   ├── catalogo.html
+│   ├── script.js
+│   └── [categorías]/
+├── css/
+├── detallesproductos/
+├── img/
+├── Isesion/
+├── navegacion/
+├── nosotros/
+├── pago/
+├── perfil/
+├── script/
+└── soporte/
+```
 
 ## Tecnologías Utilizadas
-- **HTML5**: Estructura y contenido de las páginas
-- **CSS3**: Estilos, animaciones y efectos visuales
-- **JavaScript**: Funcionalidades interactivas y dinámicas
-- **LocalStorage**: Almacenamiento del carrito y lista de deseos
-- **SessionStorage**: Gestión de sesiones de usuario
+- **HTML5**: Estructura y contenido
+- **CSS3**: Estilos y animaciones
+- **JavaScript**: Funcionalidad interactiva
+- **LocalStorage**: Persistencia del carrito
+- **SessionStorage**: Gestión de sesiones
 
 ## Funcionalidades Principales
 
-### Sistema de Partículas
-El sitio cuenta con un sistema de partículas neón animadas que crean un ambiente futurista y dinámico, mejorando la experiencia visual del usuario.
-
-### Carrito de Compras
-- Añadir productos desde la página principal o páginas de detalle
-- Modificar cantidades de productos
-- Eliminar productos
-- Persistencia de datos mediante localStorage
-
 ### Sistema de Búsqueda
 - Búsqueda en tiempo real
-- Filtrado por nombre, precio y categoría
-- Página de resultados con filtros adicionales
+- Filtros por categoría y precio
+- Resultados dinámicos
+- Sugerencias de búsqueda
 
-### Páginas de Productos
-- Galería de imágenes con lightbox
-- Información detallada del producto
-- Botones funcionales para añadir al carrito o lista de deseos
-- Productos relacionados
+### Carrito de Compras
+- Gestión de productos
+- Actualización en tiempo real
+- Persistencia de datos
+- Pre-orden de productos
 
-### Autenticación de Usuarios
-- Registro de nuevos usuarios
+### Catálogo
+- Categorías principales:
+  - Acción
+  - Aventura
+  - Deportes
+  - RPG
+- Filtros avanzados
+- Vista de cuadrícula
+
+### Sistema de Usuarios
+- Registro de cuenta
 - Inicio de sesión
-- Persistencia de sesión
+- Perfil de usuario
+- Historial de compras
 
 ## Instalación
 1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/GameStore.git
+```bash
+git clone https://github.com/NAbantoHuaman/GameStoreX
+```
 
-2. Navega al directorio del proyecto:
-   ```bash
-   cd GameStore
-
-3. Abre el archivo index.html en tu navegador web.
+2. Abre `index.html` en tu navegador web
 
 ## Uso
-- Navega por las diferentes páginas utilizando los enlaces de navegación
-- Utiliza la barra de búsqueda para encontrar juegos específicos
-- Regístrate e inicia sesión para acceder a funcionalidades adicionales
-- Añade productos al carrito o a tu lista de deseos
-- Visualiza y modifica tu carrito de compras
-- Explora las páginas de detalle de productos para ver más información
-## Hosting
-El proyecto está alojado en Vercel. Puedes acceder a la tienda en el siguiente enlace: GameStore en Vercel
+- Explora el catálogo de juegos
+- Utiliza la barra de búsqueda
+- Añade productos al carrito
+- Gestiona tu cuenta de usuario
+- Realiza el proceso de compra
 
-## Contribuciones
-Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue los siguientes pasos:
-
-1. Haz un fork del repositorio
-2. Crea una nueva rama ( git checkout -b feature/nueva-funcionalidad )
-3. Realiza los cambios necesarios y haz commit ( git commit -am 'Añadir nueva funcionalidad' )
-4. Haz push a la rama ( git push origin feature/nueva-funcionalidad )
-5. Abre un Pull Request
 ## Próximas Mejoras
-- Implementación de un sistema de pago
-- Panel de administración para gestionar productos
-- Sistema de reseñas y valoraciones
-- Optimización de rendimiento para dispositivos móviles
-- Integración con redes sociales
+- Integración de pasarela de pagos
+- Sistema de reseñas
+- Panel de administración
+- Optimización móvil
+- Integración con APIs de juegos
+
 ## Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+MIT License
 
 ## Contacto
-Para cualquier consulta, puedes contactarme a través de abantohuamanp3@gmail.com .
+Para consultas: abantohuamanp3@gmail.com

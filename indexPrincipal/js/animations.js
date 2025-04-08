@@ -1,5 +1,4 @@
 // Funcionalidad de las animaciones
-
 class Animations {
     constructor() {
         // Elementos para animar

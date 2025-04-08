@@ -1,0 +1,74 @@
+/* Correcciones para elementos del header que no se muestran correctamente */
+
+/* Corrección para el botón de búsqueda */
+.search-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10; /* Asegurar que esté por encima del input */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Asegurar que los eventos del mouse funcionen correctamente */
+    transform-style: preserve-3d; /* Prevenir problemas de transformación */
+    backface-visibility: hidden; /* Mejorar rendimiento de animaciones */
+    will-change: transform; /* Optimizar para animaciones */
+}
+
+/* Prevenir que el botón de búsqueda se desplace durante la interacción */
+.search-btn {
+    transform: translateY(-50%) !important; /* Forzar la posición vertical en todo momento */
+    right: 10px !important; /* Forzar la posición horizontal */
+    top: 50% !important; /* Asegurar que la posición superior se mantenga */
+    position: absolute !important; /* Mantener posicionamiento absoluto */
+}
+
+/* Asegurar que el botón de búsqueda permanezca fijo durante cualquier interacción */
+.search-bar:hover .search-btn,
+.search-bar:focus-within .search-btn,
+.search-bar input:focus + .search-btn {
+    transform: translateY(-50%) !important;
+    right: 10px !important;
+    top: 50% !important;
+}
+
+/* Corrección para el contador del carrito */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    background-color: var(--color-accent) !important; /* Forzar el color de fondo */
+    color: #fff !important; /* Forzar el color del texto */
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 0, 102, 0.5);
+    padding: 0 4px;
+    z-index: 5; /* Asegurar que esté por encima del icono del carrito */
+    transform-style: preserve-3d; /* Prevenir problemas de transformación */
+    backface-visibility: hidden; /* Mejorar rendimiento de animaciones */
+    will-change: transform; /* Optimizar para animaciones */
+}
+
+/* Asegurar que el contador del carrito mantenga su apariencia durante la interacción */
+.cart-icon:hover .cart-count,
+.cart-icon:focus .cart-count,
+.cart-icon:active .cart-count {
+    background-color: var(--color-accent) !important;
+    color: #fff !important;
+    transform: scale(1.1); /* Ligero efecto de escala al interactuar */
+}

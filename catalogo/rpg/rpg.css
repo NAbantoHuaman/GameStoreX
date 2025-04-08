@@ -1,6 +1,3 @@
-/* rpg.css - Estilos específicos para la página de juegos RPG */
-
-/* Estilos para la sección de juegos */
 .rpg-page .featured-games {
     padding: 3rem 0;
     margin-top: 3rem;
@@ -25,7 +22,6 @@
     position: relative;
 }
 
-/* Se eliminaron estilos de botones que ya existen en header.css */
 
 .view-all {
     color: var(--color-primary);
@@ -53,16 +49,13 @@
     transform: translateX(3px);
 }
 
-/* Grid de juegos - Mantenido porque usa minmax() diferente */
 .rpg-page .games-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
 }
 
-/* Solo mantener estilos específicos para RPG que difieran de featured.css */
 .rpg-page .game-card {
-    /* Sobrescribe solo lo necesario */
     background: rgba(16, 16, 28, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }

@@ -1,0 +1,283 @@
+
+.header {
+    transition: height 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    height: 90px;
+}
+
+.header.scrolled {
+    background-color: rgba(5, 5, 8, 0.95);
+    backdrop-filter: blur(15px);
+}
+
+/* Animaciones para el logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-icon {
+    transition: transform 0.3s ease, scale 0.3s ease;
+    transform-origin: center;
+    will-change: transform;
+}
+
+.logo-text {
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.logo:hover .logo-text::before {
+    left: 100%;
+}
+
+.logo-text .accent {
+    position: relative;
+    display: inline-block;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Animaciones para la navegación */
+.nav-list li a {
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.nav-list li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+    transform-origin: left;
+}
+
+.nav-list li a:hover::after,
+.nav-list li a.active::after {
+    width: 100%;
+}
+
+/* Animaciones para el menú hamburguesa */
+.menu-toggle {
+    position: relative;
+    z-index: 10;
+}
+
+.menu-toggle span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animaciones para la barra de búsqueda */
+.search-bar {
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+    will-change: width;
+}
+
+.search-bar input {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-btn i {
+    transition: transform 0.3s ease;
+}
+
+.search-bar:hover .search-btn i {
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Animaciones para los iconos de acción */
+.cart-icon,
+.user-icon {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon i,
+.user-icon i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cart-count {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto de brillo para los iconos */
+.cart-icon::before,
+.user-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(0, 243, 255, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.cart-icon:hover::before,
+.user-icon:hover::before {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+}
+
+/* Animación de notificación para el carrito */
+@keyframes cartBounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+}
+
+.cart-icon.notification i {
+    animation: cartBounce 1s ease;
+}
+
+/* Animación para el contador del carrito */
+@keyframes countPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.cart-count.updated {
+    animation: countPulse 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        height: 70px;
+    }
+    
+    .nav-list {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+}
+
+.search-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10; 
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    transform-style: preserve-3d; 
+    backface-visibility: hidden; 
+    will-change: transform; 
+}
+
+.search-btn {
+    transform: translateY(-50%) !important; 
+    right: 10px !important; 
+    top: 50% !important; 
+    position: absolute !important; 
+}
+
+.search-bar:hover .search-btn,
+.search-bar:focus-within .search-btn,
+.search-bar input:focus + .search-btn {
+    transform: translateY(-50%) !important;
+    right: 10px !important;
+    top: 50% !important;
+}
+
+/* Corrección para el contador del carrito */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    background-color: var(--color-accent) !important; 
+    color: #fff !important; 
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 0, 102, 0.5);
+    padding: 0 4px;
+    z-index: 5; 
+    transform-style: preserve-3d;
+    backface-visibility: hidden; 
+    will-change: transform; 
+}
+
+/* Asegurar que el contador del carrito mantenga su apariencia durante la interacción */
+.cart-icon:hover .cart-count,
+.cart-icon:focus .cart-count,
+.cart-icon:active .cart-count {
+    background-color: var(--color-accent) !important;
+    color: #fff !important;
+    transform: scale(1.1); /* Ligero efecto de escala al interactuar */
+}
+
+.header {
+    z-index: 100; /* Reducido de 1000 para mejor interacción con otros elementos */
+}
+
+.slide-content {
+    padding-top: 120px; /* Aumentado de 80px para dar más espacio debajo del header */
+}
+
+/* Ajustar la posición del hero para que comience después del header */
+.hero {
+    padding-top: 70px; 
+    height: calc(100vh - 70px); 
+}
+
+.slide-overlay {
+    background: linear-gradient(to right, rgba(5, 5, 8, 0.9), rgba(5, 5, 8, 0.5));
+}
+
+.slide-badge {
+    position: relative;
+    z-index: 5;
+}
+
+.glitch-text {
+    position: relative;
+    z-index: 5;
+}

@@ -1,65 +1,63 @@
-/* variables.css - Paleta de colores y variables para el tema Cyberpunk */
-
 :root {
     /* Colores principales */
-    --color-primary: #00f3ff; /* Neón cian */
-    --color-secondary: #ff00ff; /* Neón magenta */
-    --color-tertiary: #ffff00; /* Neón amarillo */
-    --color-accent: #ff0066; /* Rosa neón */
+    --color-primary: #00f3ff; 
+    --color-secondary: #ff00ff; 
+    --color-tertiary: #ffff00; 
+    --color-accent: #ff0066; 
     
     /* Colores de fondo */
-    --color-bg-dark: #0a0a12; /* Fondo principal oscuro */
-    --color-bg-darker: #050508; /* Fondo secundario más oscuro */
-    --color-bg-card: rgba(16, 16, 28, 0.8); /* Fondo para tarjetas */
-    --color-bg-card-hover: rgba(25, 25, 40, 0.9); /* Fondo para tarjetas en hover */
+    --color-bg-dark: #0a0a12; 
+    --color-bg-darker: #050508; 
+    --color-bg-card: rgba(16, 16, 28, 0.8); 
+    --color-bg-card-hover: rgba(25, 25, 40, 0.9); 
     
     /* Degradados */
-    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-accent)); /* Degradado principal */
-    --gradient-card: linear-gradient(180deg, rgba(0, 243, 255, 0.1), rgba(255, 0, 255, 0.05)); /* Degradado para tarjetas */
-    --gradient-button: linear-gradient(90deg, var(--color-primary), var(--color-accent)); /* Degradado para botones */
-    --gradient-section: linear-gradient(180deg, rgba(10, 10, 18, 0.8), rgba(5, 5, 8, 0.9)); /* Degradado para secciones */
+    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-accent)); 
+    --gradient-card: linear-gradient(180deg, rgba(0, 243, 255, 0.1), rgba(255, 0, 255, 0.05)); 
+    --gradient-button: linear-gradient(90deg, var(--color-primary), var(--color-accent)); 
+    --gradient-section: linear-gradient(180deg, rgba(10, 10, 18, 0.8), rgba(5, 5, 8, 0.9)); 
     
     /* Sombras y brillos */
-    --neon-shadow-primary: 0 0 10px rgba(0, 243, 255, 0.7), 0 0 20px rgba(0, 243, 255, 0.5), 0 0 30px rgba(0, 243, 255, 0.3); /* Sombra neón cian */
-    --neon-shadow-secondary: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(255, 0, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.3); /* Sombra neón magenta */
-    --neon-shadow-accent: 0 0 10px rgba(255, 0, 102, 0.7), 0 0 20px rgba(255, 0, 102, 0.5), 0 0 30px rgba(255, 0, 102, 0.3); /* Sombra neón rosa */
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra estándar */
+    --neon-shadow-primary: 0 0 10px rgba(0, 243, 255, 0.7), 0 0 20px rgba(0, 243, 255, 0.5), 0 0 30px rgba(0, 243, 255, 0.3); 
+    --neon-shadow-secondary: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(255, 0, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.3); 
+    --neon-shadow-accent: 0 0 10px rgba(255, 0, 102, 0.7), 0 0 20px rgba(255, 0, 102, 0.5), 0 0 30px rgba(255, 0, 102, 0.3); 
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
     
     /* Bordes */
-    --border-neon: 1px solid var(--color-primary); /* Borde neón */
-    --border-glow: 1px solid rgba(0, 243, 255, 0.5); /* Borde con brillo */
-    --border-radius-sm: 4px; /* Radio de borde pequeño */
-    --border-radius-md: 8px; /* Radio de borde mediano */
-    --border-radius-lg: 12px; /* Radio de borde grande */
+    --border-neon: 1px solid var(--color-primary); 
+    --border-glow: 1px solid rgba(0, 243, 255, 0.5);
+    --border-radius-sm: 4px; 
+    --border-radius-md: 8px; 
+    --border-radius-lg: 12px; 
     
     /* Tipografía */
-    --font-primary: 'Rajdhani', sans-serif; /* Fuente principal */
-    --font-secondary: 'Orbitron', sans-serif; /* Fuente para títulos */
-    --font-tertiary: 'Exo 2', sans-serif; /* Fuente para textos */
+    --font-primary: 'Rajdhani', sans-serif; 
+    --font-secondary: 'Orbitron', sans-serif; 
+    --font-tertiary: 'Exo 2', sans-serif; 
     
     /* Tamaños de fuente */
-    --font-size-xs: 0.75rem; /* 12px */
-    --font-size-sm: 0.875rem; /* 14px */
-    --font-size-md: 1rem; /* 16px */
-    --font-size-lg: 1.25rem; /* 20px */
-    --font-size-xl: 1.5rem; /* 24px */
-    --font-size-2xl: 2rem; /* 32px */
-    --font-size-3xl: 2.5rem; /* 40px */
-    --font-size-4xl: 3rem; /* 48px */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem; 
+    --font-size-md: 1rem; 
+    --font-size-lg: 1.25rem; 
+    --font-size-xl: 1.5rem; 
+    --font-size-2xl: 2rem; 
+    --font-size-3xl: 2.5rem; 
+    --font-size-4xl: 3rem; 
     
     /* Espaciado */
-    --spacing-xs: 0.25rem; /* 4px */
-    --spacing-sm: 0.5rem; /* 8px */
-    --spacing-md: 1rem; /* 16px */
-    --spacing-lg: 1.5rem; /* 24px */
-    --spacing-xl: 2rem; /* 32px */
-    --spacing-2xl: 3rem; /* 48px */
-    --spacing-3xl: 4rem; /* 64px */
+    --spacing-xs: 0.25rem; 
+    --spacing-sm: 0.5rem; 
+    --spacing-md: 1rem; 
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem; 
+    --spacing-2xl: 3rem; 
+    --spacing-3xl: 4rem; 
     
     /* Transiciones */
-    --transition-fast: 0.2s ease; /* Transición rápida */
-    --transition-normal: 0.3s ease; /* Transición normal */
-    --transition-slow: 0.5s ease; /* Transición lenta */
+    --transition-fast: 0.2s ease; 
+    --transition-normal: 0.3s ease; 
+    --transition-slow: 0.5s ease; 
     
     /* Z-index */
     --z-index-dropdown: 100;
@@ -75,9 +73,9 @@
     --container-max-width: 1200px;
     
     /* Efectos especiales */
-    --glitch-intensity: 5px; /* Intensidad del efecto glitch */
-    --scan-line-opacity: 0.15; /* Opacidad de las líneas de escaneo */
-    --scan-line-spacing: 8px; /* Espaciado entre líneas de escaneo */
+    --glitch-intensity: 5px; 
+    --scan-line-opacity: 0.15; 
+    --scan-line-spacing: 8px; 
 }
 
 /* Media queries para responsive */

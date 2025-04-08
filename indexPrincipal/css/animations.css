@@ -1,6 +1,3 @@
-/* animations.css - Efectos y animaciones para el tema Cyberpunk */
-
-/* Efecto de glitch para textos */
 @keyframes glitch {
     0% {
         transform: translate(0);
